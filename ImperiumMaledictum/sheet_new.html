@@ -1,0 +1,2115 @@
+<input class="toggle-tabs" type="hidden" name="attr_tab" value="page1"  />
+<input class="toggle-sheet" type="hidden" name="attr_sheet_type" value="character" />
+<input class="faction" type="hidden" name="attr_faction"  />
+<input class="patron-faction" type="hidden" name="attr_patron_faction"  />
+
+<div class="tabs">
+    <div class="tab-page1"><button type="action"
+        name="act_page1" data-i18n="page-1">Page 1</button></div>
+    <div class="tab-page2"><button type="action"
+        name="act_page2" data-i18n="page-2">Page 2</button></div>
+    <div class="tab-patron"><button type="action"
+        name="act_patron" data-i18n="patron">Patron</button></div>
+    <div class="tab-npc"><button type="action"
+        name="act_npc" data-i18n="npc">NPC</button></div>
+    <div class="tab-settings"><button type="action"
+        name="act_settings" data-i18n="settings">Settings</button></div>
+
+    <div class="roller">
+        <select class="input character" name="attr_superiority">
+          <option value="0" data-i18n="no-superiority">No Superiority</option>
+          <option value="1" data-i18n="superiority-plus-1">+1 Superiority</option>
+          <option value="2" data-i18n="superiority-plus-2">+2 Superiority</option>
+          <option value="3" data-i18n="superiority-plus-3">+3 Superiority</option>
+          <option value="4" data-i18n="superiority-plus-4">+4 Superiority</option>
+          <option value="5" data-i18n="superiority-plus-5">+5 Superiority</option>
+          <option value="6" data-i18n="superiority-plus-6">+6 Superiority</option>
+        </select>
+    </div>
+</div>
+
+<!-- ++PAGE1++ -->
+<div class="grid page1 widegap">
+    <div class="grid col3 vwidegap">
+        <h1 class="vspan2" data-i18n="imperium-maledictum">Imperium Maledictum</h1>
+        <!-- <img class="logo" src="https://raw.githubusercontent.com/clgarret/roll20-character-sheets/master/ImperiumMaledictum/imperium_maledictum_logo.jpg"/> -->
+
+        <div class="grid col4-profile1 span2 vcol">
+            <input type="text" spellcheck="false" list="origin" name="attr_origin" />
+            <datalist id="origin">
+                <option data-i18n="origin-agri-world">Agri World</option>
+                <option data-i18n="origin-feral-world">Feral World</option>
+                <option data-i18n="origin-feudal-world">Feudal World</option>
+                <option data-i18n="origin-forge-world">Forge World</option>
+                <option data-i18n="origin-hive-world">Hive World</option>
+                <option data-i18n="origin-schola-progenium">Schola Progenium</option>
+                <option data-i18n="origin-shrine-world">Shrine World</option>
+                <option data-i18n="origin-voidborn">Voidborn</option>
+            </datalist>
+            <label data-i18n="origin">Origin</label>
+
+            <input type="text" spellcheck="false" list="faction" name="attr_faction" />
+            <datalist id="faction">
+                <option data-i18n="faction-adeptus-administratum">Adeptus Administratum</option>
+                <option data-i18n="faction-adeptus-astra-telepathica">Adeptus Astra Telepathica</option>
+                <option data-i18n="faction-adeptus-mechanicus">Adeptus Mechanicus</option>
+                <option data-i18n="faction-adeptus-ministorum">Adeptus Ministorum</option>
+                <option data-i18n="faction-astra-militarum">Astra Militarum</option>
+                <option data-i18n="faction-imperial-fleet">Imperial Fleet</option>
+                <option data-i18n="faction-infractionist">Infractionist</option>
+                <option data-i18n="faction-inquisition">The Inquisition</option>
+                <option data-i18n="faction-rogue-trader">Rogue Trader Dynasty</option>
+            </datalist>
+            <label data-i18n="faction">Faction</label>
+
+            <input type="text" spellcheck="false" list="role" name="attr_role" />
+            <datalist id="role">
+                <option data-i18n="role-interlocutor">Interlocutor</option>
+                <option data-i18n="role-mystic">Mystic</option>
+                <option data-i18n="role-penumbra">Penumbra</option>
+                <option data-i18n="role-savant">Savant</option>
+                <option data-i18n="role-warrior">Warrior</option>
+                <option data-i18n="role-zealot">Zealot</option>
+            </datalist>
+            <label data-i18n="role">Role</label>
+
+            <input type="text" spellcheck="false" name="attr_patron" />
+            <label data-i18n="patron">Patron</label>
+        </div>
+
+        <div class="grid col6 span2 vcol">
+            <input type="text" spellcheck="false" name="attr_age" />
+            <label data-i18n="age">Age</label>
+
+            <input type="text" spellcheck="false" name="attr_eyes" />
+            <label data-i18n="eyes">Eyes</label>
+
+            <input type="text" spellcheck="false" name="attr_hair" />
+            <label data-i18n="hair">Hair</label>
+
+            <input type="text" spellcheck="false" name="attr_height" />
+            <label data-i18n="height">Height</label>
+
+            <input type="text" spellcheck="false" name="attr_weight" />
+            <label data-i18n="weight">Weight</label>
+
+            <input type="text" spellcheck="false" name="attr_handedness" />
+            <label data-i18n="handedness">Handedness</label>
+        </div>
+    </div>
+
+    <div class="grid col3 widegap">
+        <div class="grid vcol">
+            <input class="lrg" type="text" spellcheck="false" name="attr_character_name" />
+            <label data-i18n="character-name">Character Name</label>
+        </div>
+
+        <div class="grid col4 span2 vcol">
+            <input class="span3" type="text" spellcheck="false"
+                name="attr_distinguishing_features" />
+            <label class="span3" data-i18n="distinguishing-features">Distinguishing Features</label>
+
+            <div class="grid col2 vspan2 vcol nogap split xp">
+                <input type="number" name="attr_xp_current" />
+                <label class="hint" data-i18n="current">Current</label>
+
+                <input type="number" name="attr_xp_spent" />
+                <label class="hint" data-i18n="spent">Spent</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid col3-chars vwidegap">
+        <div class="grid nogap characteristics">
+            <h2 data-i18n="characteristics">Characteristics</h2>
+
+            <div class="grid nogap lined">
+                <div class="grid col10-chars">
+                    <span />
+                    <span class="label" data-i18n="abbr-ws">WS</span>
+                    <span class="label" data-i18n="abbr-bs">BS</span>
+                    <span class="label" data-i18n="abbr-str">STR</span>
+                    <span class="label" data-i18n="abbr-tgh">TGH</span>
+                    <span class="label" data-i18n="abbr-ag">AG</span>
+                    <span class="label" data-i18n="abbr-int">INT</span>
+                    <span class="label" data-i18n="abbr-per">PER</span>
+                    <span class="label" data-i18n="abbr-wil">WIL</span>
+                    <span class="label" data-i18n="abbr-fel">FEL</span>
+
+                    <span class="label" data-i18n="starting">Starting</span>
+                    <input type="number" name="attr_starting_ws" tooltip="Weapon Skill" title="Weapon Skill" data-i18n-title="weapon-skill" />
+                    <input type="number" name="attr_starting_bs" tooltip="Ballistic Skill" title="Ballistic Skill" data-i18n-title="ballistic-skill" />
+                    <input type="number" name="attr_starting_str" tooltip="Strength" title="Strength" data-i18n-title="strength" />
+                    <input type="number" name="attr_starting_tgh" tooltip="Toughness" title="Toughness" data-i18n-title="toughness" />
+                    <input type="number" name="attr_starting_ag" tooltip="Agility" title="Agility" data-i18n-title="agility" />
+                    <input type="number" name="attr_starting_int" tooltip="Intelligence" title="Intelligence" data-i18n-title="intelligence" />
+                    <input type="number" name="attr_starting_per" tooltip="Perception" title="Perception" data-i18n-title="perception" />
+                    <input type="number" name="attr_starting_wil" tooltip="Willpower" title="Willpower" data-i18n-title="willpower" />
+                    <input type="number" name="attr_starting_fel" tooltip="Fellowship" title="Fellowship" data-i18n-title="fellowship" />
+
+                    <span class="label" data-i18n="advances">Advances</span>
+                    <input type="number" name="attr_advances_ws" />
+                    <input type="number" name="attr_advances_bs" />
+                    <input type="number" name="attr_advances_str" />
+                    <input type="number" name="attr_advances_tgh" />
+                    <input type="number" name="attr_advances_ag" />
+                    <input type="number" name="attr_advances_int" />
+                    <input type="number" name="attr_advances_per" />
+                    <input type="number" name="attr_advances_wil" />
+                    <input type="number" name="attr_advances_fel" />
+
+                    <span class="label" data-i18n="current">Current</span>
+                    <button class="input" type="action" name="act_ws" value="">
+                        <span name="attr_ws" />
+                    </button>
+                    <button class="input" type="action" name="act_bs" value="">
+                        <span name="attr_bs" />
+                    </button>
+                    <button class="input" type="action" name="act_str" value="">
+                        <span name="attr_str" />
+                    </button>
+                    <button class="input" type="action" name="act_tgh" value="">
+                        <span name="attr_tgh" />
+                    </button>
+                    <button class="input" type="action" name="act_ag" value="">
+                        <span name="attr_ag" />
+                    </button>
+                    <button class="input" type="action" name="act_int" value="">
+                        <span name="attr_int" />
+                    </button>
+                    <button class="input" type="action" name="act_per" value="">
+                        <span name="attr_per" />
+                    </button>
+                    <button class="input" type="action" name="act_wil" value="">
+                        <span name="attr_wil" />
+                    </button>
+                    <button class="input" type="action" name="act_fel" value="">
+                        <span name="attr_fel" />
+                    </button>
+
+                    <input type="hidden" name="attr_ws_bonus" value="0" />
+                    <input type="hidden" name="attr_bs_bonus" value="0" />
+                    <input type="hidden" name="attr_str_bonus" value="0" />
+                    <input type="hidden" name="attr_tgh_bonus" value="0" />
+                    <input type="hidden" name="attr_ag_bonus" value="0" />
+                    <input type="hidden" name="attr_int_bonus" value="0" />
+                    <input type="hidden" name="attr_per_bonus" value="0" />
+                    <input type="hidden" name="attr_wil_bonus" value="0" />
+                    <input type="hidden" name="attr_fel_bonus" value="0" />
+                </div>
+            </div>
+        </div>
+
+        <div class="grid nogap vsplit">
+            <h2 data-i18n="fate">Fate</h2>
+
+            <div class="grid col2 vcol novgap">
+                <label data-i18n="current">Current</label>
+                <input type="number" name="attr_fate_current" value="3" />
+
+                <label data-i18n="total">Total</label>
+                <input type="number" name="attr_fate_spent" value="3" />
+            </div>
+
+        </div>
+
+        <div class="grid nogap vsplit corruption">
+            <h2 data-i18n="corruption">Corruption</h2>
+
+            <div class="grid col4 vcol novgap">
+                <label data-i18n="total">Total</label>
+                <input type="number" name="attr_corruption_total" />
+
+                <label class="span3" data-i18n="mutations-malignancies">Mutations & Malignancies</label>
+                <div class="auto-expand span3">
+                    <span name="attr_mutations"></span>
+                    <textarea spellcheck="false" name="attr_corruption_mutations"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid nogap skills">
+        <h2 data-i18n="skills-specialisations">Skills & Specialisations</h2>
+
+        <div class="grid col3 widegap">
+
+            <div class="grid nogap lined">
+                <div class="grid col5-skills">
+                    <span class="label" data-i18n="skill">Skill</span>
+                    <span class="label span2" data-i18n="characteristic-abbr">Char.</span>
+                    <span class="label pullup"><span data-i18n="advance-abbr">Adv.</span> <sub data-i18n="plus-five-each">(+5 each)</sub></span>
+                    <span class="label" data-i18n="total">Total</span>
+
+                    <label data-i18n="athletics">Athletics</label>
+                    <span class="label" data-i18n="abbr-str">STR</span>
+                    <span class="input" name="attr_str" />
+                    <input type="hidden" name="attr_skill_advances_athletics" value="0" />
+                    <input type="number" name="attr_skill_advances_athletics" />
+                    <input type="hidden" name="attr_skill_athletics" value="0" />
+                    <button class="input" type="action" name="act_athletics" value="">
+                        <span name="attr_athletics" />
+                    </button>
+
+                    <label data-i18n="awareness">Awareness</label>
+                    <span class="label" data-i18n="abbr-per">PER</span>
+                    <span class="input" name="attr_per" />
+                    <input type="hidden" name="attr_skill_advances_awareness" value="0" />
+                    <input type="number" name="attr_skill_advances_awareness" />
+                    <input type="hidden" name="attr_skill_awareness" value="0" />
+                    <button class="input" type="action" name="act_awareness" value="">
+                        <span name="attr_awareness" />
+                    </button>
+
+                    <label data-i18n="dexterity">Dexterity</label>
+                    <span class="label" data-i18n="abbr-ag">AG</span>
+                    <span class="input" name="attr_ag" />
+                    <input type="hidden" name="attr_skill_advances_dexterity" value="0" />
+                    <input type="number" name="attr_skill_advances_dexterity" />
+                    <input type="hidden" name="attr_skill_dexterity" value="0" />
+                    <button class="input" type="action" name="act_dexterity" value="">
+                        <span name="attr_dexterity" />
+                    </button>
+
+                    <label data-i18n="discipline">Discipline</label>
+                    <span class="label" data-i18n="abbr-wil">WIL</span>
+                    <span class="input" name="attr_wil" />
+                    <input type="hidden" name="attr_skill_advances_discipline" value="0" />
+                    <input type="number" name="attr_skill_advances_discipline" />
+                    <input type="hidden" name="attr_skill_discipline" value="0" />
+                    <button class="input" type="action" name="act_discipline" value="">
+                        <span name="attr_discipline" />
+                    </button>
+
+                    <label data-i18n="fortitude">Fortitude</label>
+                    <span class="label" data-i18n="abbr-tgh">TGH</span>
+                    <span class="input" name="attr_tgh" />
+                    <input type="hidden" name="attr_skill_advances_fortitude" value="0" />
+                    <input type="number" name="attr_skill_advances_fortitude" />
+                    <input type="hidden" name="attr_skill_fortitude" value="0" />
+                    <button class="input" type="action" name="act_fortitude" value="">
+                        <span name="attr_fortitude" />
+                    </button>
+
+                    <label data-i18n="intuition">Intuition</label>
+                    <span class="label" data-i18n="abbr-per">PER</span>
+                    <span class="input" name="attr_per" />
+                    <input type="hidden" name="attr_skill_advances_intuition" value="0" />
+                    <input type="number" name="attr_skill_advances_intuition" />
+                    <input type="hidden" name="attr_skill_intuition" value="0" />
+                    <button class="input" type="action" name="act_intuition" value="">
+                        <span name="attr_intuition" />
+                    </button>
+
+                    <label data-i18n="linguistics">Linguistics</label>
+                    <span class="label" data-i18n="abbr-int">INT</span>
+                    <span class="input" name="attr_int" />
+                    <input type="hidden" name="attr_skill_advances_linguistics" value="0" />
+                    <input type="number" name="attr_skill_advances_linguistics" />
+                    <input type="hidden" name="attr_skill_linguistics" value="0" />
+                    <button class="input" type="action" name="act_linguistics" value="">
+                        <span name="attr_linguistics" />
+                    </button>
+
+                    <label data-i18n="logic">Logic</label>
+                    <span class="label" data-i18n="abbr-int">INT</span>
+                    <span class="input" name="attr_int" />
+                    <input type="hidden" name="attr_skill_advances_logic" value="0" />
+                    <input type="number" name="attr_skill_advances_logic" />
+                    <input type="hidden" name="attr_skill_logic" value="0" />
+                    <button class="input" type="action" name="act_logic" value="">
+                        <span name="attr_logic" />
+                    </button>
+
+                    <label data-i18n="lore">Lore</label>
+                    <span class="label" data-i18n="abbr-int">INT</span>
+                    <span class="input" name="attr_int" />
+                    <input type="hidden" name="attr_skill_advances_lore" value="0" />
+                    <input type="number" name="attr_skill_advances_lore" />
+                    <input type="hidden" name="attr_skill_lore" value="0" />
+                    <button class="input" type="action" name="act_lore" value="">
+                        <span name="attr_lore" />
+                    </button>
+
+                    <label data-i18n="medicae">Medicae</label>
+                    <span class="label" data-i18n="abbr-int">INT</span>
+                    <span class="input" name="attr_int" />
+                    <input type="hidden" name="attr_skill_advances_medicae" value="0" />
+                    <input type="number" name="attr_skill_advances_medicae" />
+                    <input type="hidden" name="attr_skill_medicae" value="0" />
+                    <button class="input" type="action" name="act_medicae" value="">
+                        <span name="attr_medicae" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid nogap lined">
+                <div class="grid col5-skills">
+                    <span class="label" data-i18n="skill">Skill</span>
+                    <span class="label span2" data-i18n="characteristic-abbr">Char.</span>
+                    <span class="label pullup"><span data-i18n="advance-abbr">Adv.</span> <sub data-i18n="plus-five-each">(+5 each)</sub></span>
+                    <span class="label" data-i18n="total">Total</span>
+
+                    <label data-i18n="melee">Melee</label>
+                    <span class="label" data-i18n="abbr-ws">WS</span>
+                    <span class="input" name="attr_ws" />
+                    <input type="hidden" name="attr_skill_advances_melee" value="0" />
+                    <input type="number" name="attr_skill_advances_melee" />
+                    <input type="hidden" name="attr_skill_melee" value="0" />
+                    <button class="input" type="action" name="act_melee" value="">
+                        <span name="attr_melee" />
+                    </button>
+
+                    <label data-i18n="navigation">Navigation</label>
+                    <span class="label" data-i18n="abbr-int">INT</span>
+                    <span class="input" name="attr_int" />
+                    <input type="hidden" name="attr_skill_advances_navigation" value="0" />
+                    <input type="number" name="attr_skill_advances_navigation" />
+                    <input type="hidden" name="attr_skill_navigation" value="0" />
+                    <button class="input" type="action" name="act_navigation" value="">
+                        <span name="attr_navigation" />
+                    </button>
+
+                    <label data-i18n="piloting">Piloting</label>
+                    <span class="label" data-i18n="abbr-ag">AG</span>
+                    <span class="input" name="attr_ag" />
+                    <input type="hidden" name="attr_skill_advances_piloting" value="0" />
+                    <input type="number" name="attr_skill_advances_piloting" />
+                    <input type="hidden" name="attr_skill_piloting" value="0" />
+                    <button class="input" type="action" name="act_piloting" value="">
+                        <span name="attr_piloting" />
+                    </button>
+
+                    <label data-i18n="presence">Presence</label>
+                    <span class="label" data-i18n="abbr-wil">WIL</span>
+                    <span class="input" name="attr_wil" />
+                    <input type="hidden" name="attr_skill_advances_presence" value="0" />
+                    <input type="number" name="attr_skill_advances_presence" />
+                    <input type="hidden" name="attr_skill_presence" value="0" />
+                    <button class="input" type="action" name="act_presence" value="">
+                        <span name="attr_presence" />
+                    </button>
+
+                    <label data-i18n="psychic-mastery">Psychic Mastery</label>
+                    <span class="label" data-i18n="abbr-wil">WIL</span>
+                    <span class="input" name="attr_wil" />
+                    <input type="hidden" name="attr_skill_advances_psychic_mastery" value="0" />
+                    <input type="number" name="attr_skill_advances_psychic_mastery" />
+                    <input type="hidden" name="attr_skill_psychic_mastery" value="0" />
+                    <button class="input" type="action" name="act_psychic_mastery" value="">
+                        <span name="attr_psychic_mastery" />
+                    </button>
+
+                    <label data-i18n="ranged">Ranged</label>
+                    <span class="label" data-i18n="abbr-bs">BS</span>
+                    <span class="input" name="attr_bs" />
+                    <input type="hidden" name="attr_skill_advances_ranged" value="0" />
+                    <input type="number" name="attr_skill_advances_ranged" />
+                    <input type="hidden" name="attr_skill_ranged" value="0" />
+                    <button class="input" type="action" name="act_ranged" value="">
+                        <span name="attr_ranged" />
+                    </button>
+
+                    <label data-i18n="rapport">Rapport</label>
+                    <span class="label" data-i18n="abbr-fel">FEL</span>
+                    <span class="input" name="attr_fel" />
+                    <input type="hidden" name="attr_skill_advances_rapport" value="0" />
+                    <input type="number" name="attr_skill_advances_rapport" />
+                    <input type="hidden" name="attr_skill_rapport" value="0" />
+                    <button class="input" type="action" name="act_rapport" value="">
+                        <span name="attr_rapport" />
+                    </button>
+
+                    <label data-i18n="reflexes">Reflexes</label>
+                    <span class="label" data-i18n="abbr-ag">AG</span>
+                    <span class="input" name="attr_ag" />
+                    <input type="hidden" name="attr_skill_advances_reflexes" value="0" />
+                    <input type="number" name="attr_skill_advances_reflexes" />
+                    <input type="hidden" name="attr_skill_reflexes" value="0" />
+                    <button class="input" type="action" name="act_reflexes" value="">
+                        <span name="attr_reflexes" />
+                    </button>
+
+                    <label data-i18n="stealth">Stealth</label>
+                    <span class="label" data-i18n="abbr-ag">AG</span>
+                    <span class="input" name="attr_ag" />
+                    <input type="hidden" name="attr_skill_advances_stealth" value="0" />
+                    <input type="number" name="attr_skill_advances_stealth" />
+                    <input type="hidden" name="attr_skill_stealth" value="0" />
+                    <button class="input" type="action" name="act_stealth" value="">
+                        <span name="attr_stealth" />
+                    </button>
+
+                    <label data-i18n="tech">Tech</label>
+                    <span class="label" data-i18n="abbr-int">INT</span>
+                    <span class="input" name="attr_int" />
+                    <input type="hidden" name="attr_skill_advances_tech" value="0" />
+                    <input type="number" name="attr_skill_advances_tech" />
+                    <input type="hidden" name="attr_skill_tech" value="0" />
+                    <button class="input" type="action" name="act_tech" value="">
+                        <span name="attr_tech" />
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid nogap lined">
+                <div class="grid col4-skills">
+                    <span class="label" data-i18n="specialisation">Specialisation</span>
+                    <span class="label" data-i18n="skill">Skill</span>
+                    <span class="label pullup"><span data-i18n="advance-abbr-caps">ADV</span> <sub data-i18n="plus-five-each">(+5 each)</sub></span>
+                    <span class="label" data-i18n="total">Total</span>
+                </div>
+
+                <fieldset class="repeating_specialisations">
+                    <input type="text" spellcheck="false" name="attr_specialisation_name" />
+                    <select class="input" name="attr_specialisation_skill">
+                        <option value=""></option>
+                        <option value="athletics" data-i18n="athletics">Athletics</option>
+                        <option value="awareness" data-i18n="awareness">Awareness</option>
+                        <option value="dexterity" data-i18n="dexterity">Dexterity</option>
+                        <option value="discipline" data-i18n="discipline">Discipline</option>
+                        <option value="fortitude" data-i18n="fortitude">Fortitude</option>
+                        <option value="intuition" data-i18n="intuition">Intuition</option>
+                        <option value="linguistics" data-i18n="linguistics">Linguistics</option>
+                        <option value="logic" data-i18n="logic">Logic</option>
+                        <option value="lore" data-i18n="lore">Lore</option>
+                        <option value="medicae" data-i18n="medicae">Medicae</option>
+                        <option value="navigation" data-i18n="navigation">Navigation</option>
+                        <option value="piloting" data-i18n="piloting">Piloting</option>
+                        <option value="presence" data-i18n="presence">Presence</option>
+                        <option value="psychic_mastery" data-i18n="psychic-mastery">Psychic Mastery</option>
+                        <option value="rapport" data-i18n="rapport">Rapport</option>
+                        <option value="reflexes" data-i18n="reflexes">Reflexes</option>
+                        <option value="stealth" data-i18n="stealth">Stealth</option>
+                        <option value="tech" data-i18n="tech">Tech</option>
+                    </select>
+                    <input type="number" name="attr_specialisation_advances" />
+                    <input type="hidden" name="attr_specialisation_total" value="0" />
+                    <button class="input" type="action" name="act_action" value="">
+                        <span name="attr_specialisation_total" />
+                    </button>
+                </fieldset>
+
+                <div class="grid col4-skills">
+                  <span class="label" data-i18n="specialisation">Specialisation</span>
+                  <span class="label" data-i18n="skill">Skill</span>
+                  <span class="label pullup"><span data-i18n="advance-abbr-caps">ADV</span> <sub data-i18n="plus-five-each">(+5 each)</sub></span>
+                  <span class="label" data-i18n="total">Total</span>
+                </div>
+
+                <fieldset class="repeating_specialisations2" name="repeating_specialisations2">
+                  <select class="input" name="attr_specialisation2_name">
+                    <option value="Brawling" data-i18n="spec-brawling">Brawling</option>
+                    <option value="One-handed" data-i18n="spec-one-handed-title">One-Handed</option>
+                    <option value="Two-handed" data-i18n="spec-two-handed-title">Two-Handed</option>
+                    <option value="Long Gun" data-i18n="spec-long-gun">Long Gun</option>
+                    <option value="Ordnance" data-i18n="spec-ordnance">Ordnance</option>
+                    <option value="Pistol" data-i18n="spec-pistols">Pistols</option>
+                    <option value="Thrown" data-i18n="spec-thrown">Thrown</option>
+                  </select>
+                  <select class="input" name="attr_specialisation2_skill">
+                    <option value="melee" data-i18n="melee">Melee</option>
+                    <option value="ranged" data-i18n="ranged">Ranged</option>
+                  </select>
+                  <input type="number" name="attr_specialisation2_advances" />
+                  <input type="hidden" name="attr_specialisation2_total" value="0" />
+                  <button class="input" type="action" name="act_action" value="">
+                  <span name="attr_specialisation2_total" />
+                  </button>
+                </fieldset>
+            </div>
+          </div>
+      </div>
+
+    <div class="grid col3 widegap">
+        <div class="grid widegap">
+            <div class="grid nogap">
+                <h2 data-i18n="goals">Goals</h2>
+                <div class="auto-expand">
+                    <span name="attr_goals"></span>
+                    <textarea spellcheck="false" name="attr_goals"></textarea>
+                </div>
+            </div>
+
+            <div class="grid nogap">
+                <h2 data-i18n="connections">Connections</h2>
+                <div class="auto-expand">
+                    <span name="attr_connections"></span>
+                    <textarea spellcheck="false" name="attr_connections"></textarea>
+                </div>
+            </div>
+
+            <div class="grid nogap">
+                <h2 data-i18n="notes">Notes</h2>
+                <div class="auto-expand">
+                    <span name="attr_notes"></span>
+                    <textarea spellcheck="false" name="attr_notes"></textarea>
+                </div>
+            </div>
+
+            <div class="grid nogap">
+                <h2 data-i18n="divination">Divination</h2>
+                <div class="auto-expand">
+                    <span name="attr_divination"></span>
+                    <textarea spellcheck="false" name="attr_divination"></textarea>
+                </div>
+            </div>
+
+            <div class="grid nogap">
+                <h2 data-i18n="solars">Solars</h2>
+                <div class="auto-expand">
+                    <span name="attr_currency"></span>
+                    <textarea spellcheck="false" name="attr_currency"></textarea>
+                </div>
+            </div>
+
+            <div class="grid nogap">
+                <h3 data-i18n="other-currencies">Other Currencies</h3>
+                <div class="auto-expand">
+                    <span name="attr_other_currencies"></span>
+                    <textarea spellcheck="false" name="attr_other_currencies"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid span2 widegap">
+            <div class="grid nogap">
+                <h2 data-i18n="influence">Influence</h2>
+
+                <div class="grid col3-influences">
+                    <span class="label" data-i18n="faction">Faction</span>
+                    <span class="label" data-i18n="infl-abbr">Infl.</span>
+                    <span class="label" data-i18n="contacts">Contacts</span>
+                </div>
+
+                <fieldset class="repeating_influences">
+                    <input type="text" spellcheck="false" name="attr_influence_faction" />
+                    <input type="number" name="attr_influence_value" />
+                    <input type="text" spellcheck="false" name="attr_influence_contacts" />
+                </fieldset>
+            </div>
+
+            <div class="grid nogap">
+                <h2 data-i18n="talents">Talents</h2>
+
+                <div class="grid col2-talents">
+                    <span class="label" data-i18n="talent">Talent</span>
+                    <span class="label" data-i18n="effect">Effect</span>
+                </div>
+
+                <fieldset class="repeating_talents">
+                    <input type="text" spellcheck="false" name="attr_talent_name" />
+                    <div class="auto-expand">
+                        <span name="attr_talent_effect"></span>
+                        <textarea spellcheck="false" name="attr_talent_effect"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ++PAGE2++ -->
+<div class="grid page2 widegap">
+    <div class="grid col6 widegap">
+        <div class="grid widegap">
+            <div class="grid nogap">
+                <h2 data-i18n="initiative">Initiative</h2>
+                <label class="hint" data-i18n="perb-agb">PerB + AgB</label>
+                <button class="input unlined" type="roll" name="roll_initiative" value="&{template:imbasic} {{reroll=[^{reroll}](~initiative)}} {{name=@{character_name}}} {{topic=^{initiative}}} {{result=[[@{initiative} &{tracker}]]}}">
+                    <span name="attr_initiative" />
+                </button>
+            </div>
+
+            <div class="grid nogap">
+                <div class="grid nogap vsplit warpcharge">
+                    <h2 data-i18n="warp-charge">Warp Charge</h2>
+                    <div class="grid col2 vcol novgap">
+                        <label data-i18n="current">Current</label>
+                        <input type="hidden" name="attr_warp_charge_current" />
+                        <input type="number" name="attr_warp_charge" />
+
+                        <label data-i18n="threshold">Threshold</label>
+                        <input type="number" name="attr_warp_charge_max" />
+                    </div>
+                    <label class="hint" data-i18n="wilb-sanctioned">WilB (×2 if Sanctioned)</label>
+                </div>
+
+                <label class="flex slim">
+                    <input type="checkbox" name="attr_sanctioned" value="1" />
+                    <span class="label" data-i18n="sanctioned">Sanctioned</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="grid nogap vsplit wounds">
+            <h2 data-i18n="wounds">Wounds</h2>
+            <label class="hint" data-i18n="wounds-formula">StrB + (2 × TghB) + WilB</label>
+
+            <div class="grid col2 vcol novgap">
+                <label data-i18n="current">Current</label>
+                <input type="hidden" name="attr_wounds_current" />
+                <input type="number" name="attr_wounds" />
+
+                <label data-i18n="maximum">Maximum</label>
+                <input type="number" name="attr_wounds_max" />
+            </div>
+        </div>
+
+        <div class="grid span4 nogap">
+            <h2 data-i18n="critical-wounds">Critical Wounds</h2>
+            <label class="hint"><span data-i18n="critical-max-hint">Maximum equal to TghB (</span><span name="attr_tgh_bonus" />)</label>
+
+            <div class="grid col2-crits">
+                <span class="label" data-i18n="location">Location</span>
+                <span class="label" data-i18n="effect">Effect</span>
+            </div>
+
+            <fieldset class="repeating_criticals">
+                <select class="input" name="attr_critical_location">
+                    <option value=""></option>
+                    <option value="Head" data-i18n="head">Head</option>
+                    <option value="Left Arm" data-i18n="left-arm">Left Arm</option>
+                    <option value="Right Arm" data-i18n="right-arm">Right Arm</option>
+                    <option value="Left Leg" data-i18n="left-leg">Left Leg</option>
+                    <option value="Right Leg" data-i18n="right-leg">Right Leg</option>
+                    <option value="Body" data-i18n="body">Body</option>
+                </select>
+                <div class="auto-expand">
+                    <span name="attr_critical_effect"></span>
+                    <textarea spellcheck="false" name="attr_critical_effect"></textarea>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="grid nogap">
+        <h2 data-i18n="weapons">Weapons</h2>
+
+        <div class="grid col8-weapons">
+            <span class="label" data-i18n="name">Name</span>
+            <span class="label" data-i18n="specialisation">Specialisation</span>
+            <span class="label" data-i18n="test">Test</span>
+            <span class="label" data-i18n="damage">Damage</span>
+            <span class="label" data-i18n="range">Range</span>
+            <span class="label" data-i18n="mag">Mag</span>
+            <span class="label" data-i18n="enc-abbr">Enc.</span>
+            <span class="label" data-i18n="traits">Traits</span>
+        </div>
+
+        <fieldset class="repeating_weapons" name="repeating_weapons">
+            <input class="weaponspec" type="hidden" name="attr_weapon_specialisation" />
+            <input type="text" spellcheck="false" name="attr_weapon_name" />
+            <select class="input" name="attr_weapon_specialisation">
+                <option value=""></option>
+                <option value="Brawling" data-i18n="spec-brawling">Brawling</option>
+                <option value="One-handed" data-i18n="spec-one-handed">One-handed</option>
+                <option value="Two-handed" data-i18n="spec-two-handed">Two-handed</option>
+                <option value="Long Gun" data-i18n="spec-long-gun">Long Gun</option>
+                <option value="Ordnance" data-i18n="spec-ordnance">Ordnance</option>
+                <option value="Pistol" data-i18n="spec-pistol">Pistol</option>
+                <option value="Thrown" data-i18n="spec-thrown">Thrown</option>
+            </select>
+            <button class="input" type="action" name="act_action" value="">
+                <span name="attr_weapon_total" />
+            </button>
+            <input class="ranged" type="number" name="attr_weapon_damage" />
+            <div class="grid col2 nogap split melee">
+                <input type="number" name="attr_weapon_damage" />
+                <span class="input" name="attr_weapon_damage_total" />
+                <input type="hidden" name="attr_weapon_damage_total" value="0" />
+            </div>
+            <select class="input" name="attr_weapon_range">
+                <option value=""></option>
+                <option value="Immediate" data-i18n="range-immediate">Immediate</option>
+                <option value="Short" data-i18n="range-short">Short</option>
+                <option value="Medium" data-i18n="size-medium">Medium</option>
+                <option value="Long" data-i18n="range-long">Long</option>
+                <option value="Extreme" data-i18n="range-extreme">Extreme</option>
+            </select>
+            <div class="grid col2 nogap split">
+                <input type="number" name="attr_weapon_mag" />
+                <input type="number" name="attr_weapon_mag_max" />
+            </div>
+            <input type="number" name="attr_weapon_enc" />
+            <div class="auto-expand">
+                <span name="attr_weapon_traits"></span>
+                <textarea spellcheck="false" name="attr_weapon_traits"></textarea>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="grid col5 widegap">
+        <div class="grid span4 nogap">
+            <h2 data-i18n="armour">Armour</h2>
+
+            <div class="grid col5-armour">
+                <span class="label" data-i18n="name">Name</span>
+                <span class="label" data-i18n="locations">Locations</span>
+                <span class="label" data-i18n="armour">Armour</span>
+                <span class="label" data-i18n="enc-abbr">Enc.</span>
+                <span class="label" data-i18n="traits">Traits</span>
+            </div>
+
+            <fieldset class="repeating_armour">
+                <input type="text" spellcheck="false" name="attr_armour_name" />
+                <select class="input" name="attr_armour_locations">
+                    <option value=""></option>
+                    <option value="All" data-i18n="all">All</option>
+                    <option value="Arms,Body,Legs" data-i18n="arms-body-legs">Arms,Body,Legs</option>
+                    <option value="Arms,Body" data-i18n="arms-body">Arms,Body</option>
+                    <option value="Head" data-i18n="head">Head</option>
+                    <option value="Arms" data-i18n="arms">Arms</option>
+                    <option value="Body" data-i18n="body">Body</option>
+                    <option value="Legs" data-i18n="legs">Legs</option>
+                    <option value="Special" data-i18n="special">Special</option>
+                </select>
+                <input type="number" name="attr_armour_value" />
+                <input type="number" name="attr_armour_enc" />
+                <div class="auto-expand">
+                    <span name="attr_armour_traits"></span>
+                    <textarea spellcheck="false" name="attr_armour_traits"></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="grid nogap lined tight">
+            <div class="grid col3-hitloc">
+                <span class="label" data-i18n="d10">d10</span>
+                <span class="label" data-i18n="hit-location">Hit Location</span>
+                <span class="label" data-i18n="armour">Armour</span>
+
+                <label>1</label>
+                <span class="label" data-i18n="head">Head</span>
+                <input type="number" name="attr_head_armour" />
+                <input type="hidden" name="attr_head_armour" value="0" />
+
+                <label>2</label>
+                <span class="label" data-i18n="left-arm">Left Arm</span>
+                <input type="number" name="attr_larm_armour" />
+                <input type="hidden" name="attr_larm_armour" value="0" />
+
+                <label>3</label>
+                <span class="label" data-i18n="right-arm">Right Arm</span>
+                <input type="number" name="attr_rarm_armour" />
+                <input type="hidden" name="attr_rarm_armour" value="0" />
+
+                <label>4</label>
+                <span class="label" data-i18n="left-leg">Left Leg</span>
+                <input type="number" name="attr_lleg_armour" />
+                <input type="hidden" name="attr_lleg_armour" value="0" />
+
+                <label>5</label>
+                <span class="label" data-i18n="right-leg">Right Leg</span>
+                <input type="number" name="attr_rleg_armour" />
+                <input type="hidden" name="attr_rleg_armour" value="0" />
+
+                <label>6-0</label>
+                <span class="label" data-i18n="body">Body</span>
+                <input type="number" name="attr_body_armour" />
+                <input type="hidden" name="attr_body_armour" value="0" />
+            </div>
+        </div>
+    </div>
+
+    <div class="grid col4 widegap">
+      <div class="grid span4 nogap">
+        <h2 data-i18n="equipment">Equipment</h2>
+
+          <div class="grid col4 gap">
+
+                <input type="text" id="equipment1" name="attr_equipment1">
+                <input type="text" id="equipment2" name="attr_equipment2">
+                <input type="text" id="equipment3" name="attr_equipment3">
+                <input type="text" id="equipment4" name="attr_equipment4">
+
+                <input type="text" id="equipment5" name="attr_equipment5">
+                <input type="text" id="equipment6" name="attr_equipment6">
+                <input type="text" id="equipment7" name="attr_equipment7">
+                <input type="text" id="equipment8" name="attr_equipment8">
+
+                <input type="text" id="equipment9" name="attr_equipment9">
+                <input type="text" id="equipment10" name="attr_equipment10">
+                <input type="text" id="equipment11" name="attr_equipment11">
+                <input type="text" id="equipment12" name="attr_equipment12">
+
+                <input type="text" id="equipment13" name="attr_equipment13">
+                <input type="text" id="equipment14" name="attr_equipment14">
+                <input type="text" id="equipment15" name="attr_equipment15">
+                <input type="text" id="equipment16" name="attr_equipment16">
+
+                <input type="text" id="equipment17" name="attr_equipment17">
+                <input type="text" id="equipment18" name="attr_equipment18">
+                <input type="text" id="equipment19" name="attr_equipment19">
+                <input type="text" id="equipment20" name="attr_equipment20">
+
+                <input type="text" id="equipment21" name="attr_equipment21">
+                <input type="text" id="equipment22" name="attr_equipment22">
+                <input type="text" id="equipment23" name="attr_equipment23">
+                <input type="text" id="equipment24" name="attr_equipment24">
+
+                <input type="text" id="equipment25" name="attr_equipment25">
+                <input type="text" id="equipment26" name="attr_equipment26">
+                <input type="text" id="equipment27" name="attr_equipment27">
+                <input type="text" id="equipment28" name="attr_equipment28">
+
+                <input type="text" id="equipment29" name="attr_equipment29">
+                <input type="text" id="equipment30" name="attr_equipment30">
+                <input type="text" id="equipment31" name="attr_equipment31">
+                <input type="text" id="equipment32" name="attr_equipment32">
+
+                <input type="text" id="equipment33" name="attr_equipment33">
+                <input type="text" id="equipment34" name="attr_equipment34">
+                <input type="text" id="equipment35" name="attr_equipment35">
+                <input type="text" id="equipment36" name="attr_equipment36">
+
+                <input type="text" id="equipment37" name="attr_equipment37">
+                <input type="text" id="equipment38" name="attr_equipment38">
+                <input type="text" id="equipment39" name="attr_equipment39">
+                <input type="text" id="equipment40" name="attr_equipment40">
+        </div>
+      </div>
+    </div>
+
+    <div class="grid col1">
+      <div class="grid nogap">
+          <h2 data-i18n="combat-notes">Combat Notes</h2>
+          <div class="grid col2 widgap">
+              <div class="auto-expand">
+                  <span name="attr_combat_notes"></span>
+                  <textarea spellcheck="false" name="attr_combat_notes"></textarea>
+              </div>
+
+              <div class="grid nogap vsplit encumbrance">
+                  <h3 data-i18n="encumbrance">Encumbrance</h3>
+
+                  <div class="grid col2 vcol novgap">
+                      <label data-i18n="current">Current</label>
+                      <input type="hidden" name="attr_encumbrance_current" />
+                      <input type="number" name="attr_encumbrance" />
+
+                      <label data-i18n="maximum">Maximum</label>
+                      <input type="number" name="attr_encumbrance_max" />
+                  </div>
+
+                  <label class="hint" data-i18n="encumbrance-formula">StrB + TghB</label>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <div class="grid nogap powers">
+        <h2><span data-i18n="psychic-powers">Psychic Powers</span>
+            <span class="flex">
+                <label data-i18n="psychic-focus">Psychic Focus</label>
+                <input type="checkbox" name="attr_psychic_focus" value="1" />
+            </span>
+        </h2>
+
+        <div class="grid col10-powers">
+            <span class="label" data-i18n="name">Name</span>
+            <span class="label" data-i18n="discipline">Discipline</span>
+            <span class="label" data-i18n="test">Test</span>
+            <span class="label" data-i18n="damage-abbr">Dmg</span>
+            <span class="label" data-i18n="warp-rating-abbr">WR</span>
+            <span class="label" data-i18n="difficulty">Difficulty</span>
+            <span class="label" data-i18n="range">Range</span>
+            <span class="label" data-i18n="target">Target</span>
+            <span class="label" data-i18n="duration">Duration</span>
+            <span class="label" data-i18n="effect">Effect</span>
+        </div>
+
+        <fieldset class="repeating_powers">
+            <input type="text" spellcheck="false" name="attr_power_name" />
+            <select class="input" name="attr_power_specialisation">
+                <option value=""></option>
+                <option value="Minor (Biomancy)" data-i18n="minor-biomancy">Minor (Biomancy)</option>
+                <option value="Minor (Divination)" data-i18n="minor-divination">Minor (Divination)</option>
+                <option value="Minor (Pyromancy)" data-i18n="minor-pyromancy">Minor (Pyromancy)</option>
+                <option value="Minor (Telekinesis)" data-i18n="minor-telekinesis">Minor (Telekinesis)</option>
+                <option value="Minor (Telepathy)" data-i18n="minor-telepathy">Minor (Telepathy)</option>
+                <option value="Biomancy" data-i18n="biomancy">Biomancy</option>
+                <option value="Divination" data-i18n="divination-discipline">Divination</option>
+                <option value="Pyromancy" data-i18n="pyromancy">Pyromancy</option>
+                <option value="Telekinesis" data-i18n="telekinesis">Telekinesis</option>
+                <option value="Telepathy" data-i18n="telepathy">Telepathy</option>
+            </select>
+            <button class="input" type="action" name="act_action" value="">
+                <span name="attr_power_total" />
+            </button>
+            <input type="number" name="attr_power_damage_total" />
+            <input type="number" name="attr_power_wr" />
+            <select class="input" name="attr_power_difficulty">
+                <option value=""></option>
+                <option value="60" data-i18n="difficulty-very-easy">Very Easy (+60)</option>
+                <option value="40" data-i18n="difficulty-easy">Easy (+40)</option>
+                <option value="20" data-i18n="difficulty-routine">Routine (+20)</option>
+                <option value="0" data-i18n="difficulty-challenging">Challenging (+0)</option>
+                <option value="-10" data-i18n="difficulty-difficult">Difficult (-10)</option>
+                <option value="-20" data-i18n="difficulty-hard">Hard (-20)</option>
+                <option value="-30" data-i18n="difficulty-very-hard">Very Hard (-30)</option>
+            </select>
+            <input type="text" spellcheck="false" name="attr_power_range" />
+            <input type="text" spellcheck="false" name="attr_power_target" />
+            <input type="text" spellcheck="false" name="attr_power_duration" />
+            <input type="checkbox" name="attr_power_details" value="1" />
+            <input class="toggle-details" type="hidden" name="attr_power_details" value="0" />
+            <div class="auto-expand span10">
+                <span name="attr_power_effect"></span>
+                <textarea spellcheck="false" name="attr_power_effect"></textarea>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<!-- ++PATRON++ -->
+<div class="grid patron widegap">
+    <div class="grid col3 vcol">
+        <input class="lrg" type="text" spellcheck="false" name="attr_character_name" />
+        <label data-i18n="patron-name">Patron Name</label>
+
+        <input type="text" spellcheck="false" list="faction" name="attr_patron_faction" />
+        <datalist id="patron_faction">
+            <option data-i18n="faction-adeptus-administratum">Adeptus Administratum</option>
+            <option data-i18n="faction-adeptus-astra-telepathica">Adeptus Astra Telepathica</option>
+            <option data-i18n="faction-adeptus-mechanicus">Adeptus Mechanicus</option>
+            <option data-i18n="faction-adeptus-ministorum">Adeptus Ministorum</option>
+            <option data-i18n="faction-astra-militarum">Astra Militarum</option>
+            <option data-i18n="faction-imperial-fleet">Imperial Fleet</option>
+            <option data-i18n="faction-infractionist">Infractionist</option>
+            <option data-i18n="faction-inquisition">The Inquisition</option>
+            <option data-i18n="faction-rogue-trader">Rogue Trader Dynasty</option>
+        </datalist>
+        <label data-i18n="faction">Faction</label>
+
+        <input type="text" spellcheck="false" list="patron_duty" name="attr_patron_duty" />
+        <datalist id="patron_duty">
+        </datalist>
+        <label data-i18n="duty">Duty</label>
+    </div>
+
+    <div class="grid col3 vcol">
+        <input type="text" spellcheck="false" list="patron_pay_grade" name="attr_patron_pay_grade" />
+        <datalist id="patron_pay_grade">
+            <option data-i18n="pay-poor">Poor</option>
+            <option data-i18n="pay-standard">Standard</option>
+            <option data-i18n="pay-good">Good</option>
+            <option data-i18n="pay-excellent">Excellent</option>
+        </datalist>
+        <label data-i18n="pay-grade">Pay Grade</label>
+
+        <input type="text" spellcheck="false" list="patron_motivation" name="attr_patron_motivation" />
+        <datalist id="patron_motivation">
+            <option data-i18n="motivation-conflict">Conflict</option>
+            <option data-i18n="motivation-information">Information</option>
+            <option data-i18n="motivation-material">Material</option>
+            <option data-i18n="motivation-reputation">Reputation</option>
+            <option data-i18n="motivation-unity">Unity</option>
+        </datalist>
+        <label data-i18n="motivation">Motivation</label>
+
+        <input type="text" spellcheck="false" list="patron_demeanor" name="attr_patron_demeanour" />
+        <datalist id="patron_demeanor">
+            <option data-i18n="demeanor-wrathful">Wrathful</option>
+            <option data-i18n="demeanor-sombre">Sombre</option>
+            <option data-i18n="demeanor-pragmatic">Pragmatic</option>
+            <option data-i18n="demeanor-zealous">Zealous</option>
+            <option data-i18n="demeanor-inscrutable">Inscrutable</option>
+        </datalist>
+        <label data-i18n="demeanor">Demeanor</label>
+    </div>
+
+    <div class="grid col2 widegap">
+        <div class="grid nogap">
+            <h2 data-i18n="boons">Boons</h2>
+
+            <fieldset class="repeating_patronboons">
+                <input type="text" spellcheck="false" name="attr_boon_name"
+                    placeholder="Boon" data-i18n-placeholder="boon" />
+                <div class="auto-expand">
+                    <span name="attr_boon_effect"></span>
+                    <textarea spellcheck="false" name="attr_boon_effect"></textarea>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="grid nogap">
+            <h2 data-i18n="liabilities">Liabilities</h2>
+
+            <fieldset class="repeating_patronliabilities">
+                <input type="text" spellcheck="false" name="attr_liability_name"
+                    placeholder="Liability" data-i18n-placeholder="liability" />
+                <div class="auto-expand">
+                    <span name="attr_liability_effect"></span>
+                    <textarea spellcheck="false" name="attr_liability_effect"></textarea>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="grid nogap">
+        <h2 data-i18n="influence">Influence</h2>
+
+        <div class="grid col4-influences">
+            <span class="label" data-i18n="faction">Faction</span>
+            <span class="label" data-i18n="infl-abbr-short">Infl</span>
+            <span class="label" data-i18n="contacts">Contacts</span>
+            <span class="label" data-i18n="intel">Intel</span>
+        </div>
+
+        <fieldset class="repeating_patroninfluences">
+            <input type="text" spellcheck="false" name="attr_influence_faction" />
+            <input type="number" name="attr_influence_value" />
+            <input type="text" spellcheck="false" name="attr_influence_contacts" />
+            <input type="text" spellcheck="false" name="attr_influence_intel" />
+        </fieldset>
+    </div>
+
+    <div class="grid nogap">
+        <h2 data-i18n="notes">Notes</h2>
+        <div class="auto-expand">
+            <span name="attr_patron_notes"></span>
+            <textarea spellcheck="false" name="attr_patron_notes"></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- ++NPC++ -->
+<div class="grid npc widegap">
+    <div class="grid col5-npcname vcol">
+        <input class="lrg" type="text" spellcheck="false" name="attr_character_name" />
+        <label data-i18n="name">Name</label>
+
+        <input type="text" spellcheck="false" list="size" name="attr_npc_size" />
+        <datalist id="size">
+            <option data-i18n="size-tiny">Tiny</option>
+            <option data-i18n="size-small">Small</option>
+            <option data-i18n="size-medium">Medium</option>
+            <option data-i18n="size-large">Large</option>
+            <option data-i18n="size-enormous">Enormous</option>
+            <option data-i18n="size-monstrous">Monstrous</option>
+        </datalist>
+        <label data-i18n="size">Size</label>
+
+        <input type="text" spellcheck="false" list="type" name="attr_npc_type" />
+        <label data-i18n="type">Type</label>
+
+        <input type="text" spellcheck="false" list="faction" name="attr_npc_faction" />
+        <label data-i18n="faction">Faction</label>
+
+        <input type="text" spellcheck="false" list="npc_role" name="attr_npc_role" />
+        <datalist id="npc_role">
+            <option data-i18n="npc-role-troop">Troop</option>
+            <option data-i18n="npc-role-elite">Elite</option>
+            <option data-i18n="npc-role-leader">Leader</option>
+        </datalist>
+        <label data-i18n="role">Role</label>
+    </div>
+
+    <div class="grid col2 widegap">
+        <div class="grid">
+            <div class="grid nogap lined">
+                <div class="grid col9">
+                    <button class="input" type="action" name="act_npc_ws" value="">
+                        <span class="label" data-i18n="abbr-ws">WS</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_bs" value="">
+                        <span class="label" data-i18n="abbr-bs">BS</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_str" value="">
+                        <span class="label" data-i18n="abbr-str">STR</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_tgh" value="">
+                        <span class="label" data-i18n="abbr-tgh">TGH</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_ag" value="">
+                        <span class="label" data-i18n="abbr-ag">AG</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_int" value="">
+                        <span class="label" data-i18n="abbr-int">INT</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_per" value="">
+                        <span class="label" data-i18n="abbr-per">PER</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_wil" value="">
+                        <span class="label" data-i18n="abbr-wil">WIL</span>
+                    </button>
+                    <button class="input" type="action" name="act_npc_fel" value="">
+                        <span class="label" data-i18n="abbr-fel">FEL</span>
+                    </button>
+
+                    <input type="number" name="attr_npc_ws" tooltip="Weapon Skill" title="Weapon Skill" data-i18n-title="weapon-skill" />
+                    <input type="number" name="attr_npc_bs" tooltip="Ballistic Skill" title="Ballistic Skill" data-i18n-title="ballistic-skill" />
+                    <input type="number" name="attr_npc_str" tooltip="Strength" title="Strength" data-i18n-title="strength" />
+                    <input type="number" name="attr_npc_tgh" tooltip="Toughness" title="Toughness" data-i18n-title="toughness" />
+                    <input type="number" name="attr_npc_ag" tooltip="Agility" title="Agility" data-i18n-title="agility" />
+                    <input type="number" name="attr_npc_int" tooltip="Intelligence" title="Intelligence" data-i18n-title="intelligence" />
+                    <input type="number" name="attr_npc_per" tooltip="Perception" title="Perception" data-i18n-title="perception" />
+                    <input type="number" name="attr_npc_wil" tooltip="Willpower" title="Willpower" data-i18n-title="willpower" />
+                    <input type="number" name="attr_npc_fel" tooltip="Fellowship" title="Fellowship" data-i18n-title="fellowship" />
+                </div>
+            </div>
+
+            <div class="grid col3 vcol">
+                <div class="grid col2 nogap split">
+                    <input type="number" name="attr_npc_wounds" />
+                    <input type="number" name="attr_npc_wounds_max" />
+                </div>
+                <label data-i18n="wounds">Wounds</label>
+
+                <div class="grid col2 nogap split">
+                    <input type="number" name="attr_npc_critical_wounds" />
+                    <input type="number" name="attr_npc_critical_wounds_max" />
+                </div>
+                <label data-i18n="critical-wounds">Critical Wounds</label>
+
+                <div class="grid col2 nogap split">
+                    <input type="number" name="attr_npc_warp_charge" />
+                    <input type="number" name="attr_npc_warp_charge_max" />
+                </div>
+                <label data-i18n="warp-charge">Warp Charge</label>
+            </div>
+
+            <div class="grid col4 vcol">
+                <input type="number" name="attr_npc_armour" />
+                <label data-i18n="armour">Armour</label>
+
+                <div class="grid col2">
+                    <input type="number" name="attr_npc_initiative" />
+                    <button class="input dice" type="roll" name="roll_npcinitiative" value="&{template:imbasic} {{reroll=[^{reroll}](~npcinitiative)}} {{name=@{character_name}}} {{topic=^{initiative}}} {{result=[[@{npc_initiative} &{tracker}]]}}" />
+                </div>
+                <label data-i18n="initiative">Initiative</label>
+
+                <input type="text" spellcheck="false" list="speed" name="attr_npc_speed" />
+                <datalist id="speed">
+                    <option data-i18n="speed-normal">Normal</option>
+                    <option data-i18n="speed-fast">Fast</option>
+                    <option data-i18n="speed-slow">Slow</option>
+                </datalist>
+                <label data-i18n="speed">Speed</label>
+
+                <input type="number" name="attr_npc_resolve" />
+                <label data-i18n="resolve">Resolve</label>
+            </div>
+
+            <div class="grid nogap">
+                <h3 data-i18n="skills">Skills</h3>
+
+                <fieldset class="repeating_npcskills">
+                    <input type="text" spellcheck="false" name="attr_npcskill_name" placeholder="Name" data-i18n-placeholder="name" />
+                    <input type="number" name="attr_npcskill_total" />
+                    <button class="input dice" type="action" name="act_action" value="" />
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid nogap">
+                <h2 data-i18n="traits">Traits</h2>
+
+                <fieldset class="repeating_npctraits">
+                    <input type="text" spellcheck="false" name="attr_npctrait_name" placeholder="Name" data-i18n-placeholder="name" />
+                    <div class="auto-expand">
+                        <span name="attr_npctrait_effect"></span>
+                        <textarea spellcheck="false" name="attr_npctrait_effect" placeholder="Effect" data-i18n-placeholder="effect"></textarea>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="grid nogap">
+                <h2 data-i18n="possessions">Possessions</h2>
+
+                <div class="auto-expand">
+                    <span name="attr_npc_equipment"></span>
+                    <textarea spellcheck="false" name="attr_npc_equipment" placeholder="Possessions" data-i18n-placeholder="possessions"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid nogap span2">
+            <h2 data-i18n="attacks">Attacks</h2>
+
+            <div class="grid col7-npcattacks">
+                <span class="label" data-i18n="name">Name</span>
+                <span class="label" data-i18n="skill">Skill</span>
+                <span class="label" data-i18n="test">Test</span>
+                <span class="label" data-i18n="warp-rating-abbr">WR</span>
+                <span class="label" data-i18n="damage">Damage</span>
+                <span class="label" data-i18n="range">Range</span>
+                <span class="label" data-i18n="traits">Traits</span>
+            </div>
+
+            <fieldset class="repeating_npcattacks">
+                <input type="text" spellcheck="false" name="attr_npcattack_name" placeholder="Name" data-i18n-placeholder="name" />
+                <input type="text" spellcheck="false" name="attr_npcattack_skill" placeholder="Skill" data-i18n-placeholder="skill" />
+                <div class="grid col2">
+                    <input type="number" name="attr_npcattack_total" placeholder="25" />
+                    <button class="input dice" type="action" name="act_action" value="" />
+                </div>
+                <input type="number" name="attr_npcattack_wr" placeholder="0" />
+                <div class="auto-expand">
+                    <span name="attr_npcattack_damage_info"></span>
+                    <textarea spellcheck="false" name="attr_npcattack_damage_info" placeholder="4 + SL Damage" data-i18n-placeholder="npc-damage-example"></textarea>
+                </div>
+                <select class="input" name="attr_npcattack_range" placeholder="Range" data-i18n-placeholder="range">
+                    <option value=""></option>
+                    <option value="Immediate" data-i18n="range-immediate">Immediate</option>
+                    <option value="Short" data-i18n="range-short">Short</option>
+                    <option value="Medium" data-i18n="range-medium">Medium</option>
+                    <option value="Long" data-i18n="range-long">Long</option>
+                    <option value="Extreme" data-i18n="range-extreme">Extreme</option>
+                </select>
+                <div class="auto-expand">
+                    <span name="attr_npcattack_traits"></span>
+                    <textarea spellcheck="false" name="attr_npcattack_traits" placeholder="Traits" data-i18n-placeholder="traits"></textarea>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+<!-- ++SETTINGS++ -->
+<div class="grid settings widegap">
+    <h2 data-i18n="settings">Settings</h2>
+
+    <div class="grid col2 widegap">
+        <div class="grid vcol">
+            <select class="input" name="attr_sheet_type">
+                <option value="character" data-i18n="character">Character</option>
+                <option value="patron" data-i18n="patron">Patron</option>
+                <option value="npc" data-i18n="npc">NPC</option>
+            </select>
+            <label data-i18n="sheet-type">Sheet Type</label>
+        </div>
+
+        <div class="grid vcol">
+            <select class="input" name="attr_roll_visibility">
+                <option value="public" data-i18n="public">Public</option>
+                <option value="gm" data-i18n="game-master-only">Game Master Only</option>
+            </select>
+            <label data-i18n="roll-visibility">Roll Visibility</label>
+        </div>
+    </div>
+    <input type="hidden" name="attr_migration_version" value="0" />
+</div>
+
+<script type="text/worker">
+
+    const tab_list = ["page1","page2","patron","npc","settings"];
+    const chars_data = {
+        "ws": {"name": "Weapon Skill", "i18n": "weapon-skill"},
+        "bs": {"name": "Ballistic Skill", "i18n": "ballistic-skill"},
+        "str": {"name": "Strength", "i18n": "strength"},
+        "tgh": {"name": "Toughness", "i18n": "toughness"},
+        "ag": {"name": "Agility", "i18n": "agility"},
+        "int": {"name": "Intelligence", "i18n": "intelligence"},
+        "per": {"name": "Perception", "i18n": "perception"},
+        "wil": {"name": "Willpower", "i18n": "willpower"},
+        "fel": {"name": "Fellowship", "i18n": "fellowship"}
+    };
+    const skill_data = {
+        "athletics": {
+            "name": "Athletics",
+            "i18n": "athletics",
+            "char": "str"
+        },
+        "awareness": {
+            "name": "Awareness",
+            "i18n": "awareness",
+            "char": "per"
+        },
+        "dexterity": {
+            "name": "Dexterity",
+            "i18n": "dexterity",
+            "char": "ag"
+        },
+        "discipline": {
+            "name": "Discipline",
+            "i18n": "discipline",
+            "char": "wil"
+        },
+        "fortitude": {
+            "name": "Fortitude",
+            "i18n": "fortitude",
+            "char": "tgh"
+        },
+        "intuition": {
+            "name": "Intuition",
+            "i18n": "intuition",
+            "char": "per"
+        },
+        "linguistics": {
+            "name": "Linguistics",
+            "i18n": "linguistics",
+            "char": "int"
+        },
+        "logic": {
+            "name": "Logic",
+            "i18n": "logic",
+            "char": "int"
+        },
+        "lore": {
+            "name": "Lore",
+            "i18n": "lore",
+            "char": "int"
+        },
+        "medicae": {
+            "name": "Medicae",
+            "i18n": "medicae",
+            "char": "int"
+        },
+        "melee": {
+            "name": "Melee",
+            "i18n": "melee",
+            "char": "ws"
+        },
+        "navigation": {
+            "name": "Navigation",
+            "i18n": "navigation",
+            "char": "int"
+        },
+        "presence": {
+            "name": "Presence",
+            "i18n": "presence",
+            "char": "wil"
+        },
+        "piloting": {
+            "name": "Piloting",
+            "i18n": "piloting",
+            "char": "ag"
+        },
+        "psychic_mastery": {
+            "name": "Psychic Mastery",
+            "i18n": "psychic-mastery",
+            "char": "wil"
+        },
+        "ranged": {
+            "name": "Ranged",
+            "i18n": "ranged",
+            "char": "bs"
+        },
+        "rapport": {
+            "name": "Rapport",
+            "i18n": "rapport",
+            "char": "fel"
+        },
+        "reflexes": {
+            "name": "Reflexes",
+            "i18n": "reflexes",
+            "char": "ag"
+        },
+        "stealth": {
+            "name": "Stealth",
+            "i18n": "stealth",
+            "char": "ag"
+        },
+        "tech": {
+            "name": "Tech",
+            "i18n": "tech",
+            "char": "int"
+        }
+    };
+    const melee_list = ["Brawling","One-handed","Two-handed"];
+    const ranged_list = ["Long Gun","Ordnance","Pistol","Thrown"];
+    const stored_value_i18n = {
+        "Brawling": "spec-brawling",
+        "One-handed": "spec-one-handed",
+        "Two-handed": "spec-two-handed",
+        "Long Gun": "spec-long-gun",
+        "Ordnance": "spec-ordnance",
+        "Pistol": "spec-pistol",
+        "Thrown": "spec-thrown"
+    };
+    const diff_data = {
+        "60": {"name": "Very Easy (+60)", "i18n": "difficulty-very-easy"},
+        "40": {"name": "Easy (+40)", "i18n": "difficulty-easy"},
+        "20": {"name": "Routine (+20)", "i18n": "difficulty-routine"},
+        "0": {"name": "Challenging (+0)", "i18n": "difficulty-challenging"},
+        "-10": {"name": "Difficult (-10)", "i18n": "difficulty-difficult"},
+        "-20": {"name": "Hard (-20)", "i18n": "difficulty-hard"},
+        "-30": {"name": "Very Hard (-30)", "i18n": "difficulty-very-hard"}
+    };
+    const hitloc_data = {
+        "1": {"name": "Head", "key": "head", "i18n": "head"},
+        "2": {"name": "Left Arm", "key": "larm", "i18n": "left-arm"},
+        "3": {"name": "Right Arm", "key": "rarm", "i18n": "right-arm"},
+        "4": {"name": "Left Leg", "key": "lleg", "i18n": "left-leg"},
+        "5": {"name": "Right Leg", "key": "rleg", "i18n": "right-leg"},
+        "6": {"name": "Body", "key": "body", "i18n": "body"},
+        "7": {"name": "Body", "key": "body", "i18n": "body"},
+        "8": {"name": "Body", "key": "body", "i18n": "body"},
+        "9": {"name": "Body", "key": "body", "i18n": "body"},
+        "0": {"name": "Body", "key": "body", "i18n": "body"}
+    };
+    const diff_list = [-30,-20,-10,0,20,40,60];
+    const chars_list = Object.keys(chars_data);
+    const chars_start_list = chars_list.map(i => "starting_" + i);
+    const chars_advances_list = chars_list.map(i => "advances_" + i);
+    const npc_chars_list = chars_list.map(i => "npc_" + i);
+    const skill_list = Object.keys(skill_data);
+    const skill_advances_list = skill_list.map(i => "skill_advances_" + i);
+    const chars_trigger_list = chars_start_list
+        .concat(chars_advances_list)
+        .concat(skill_advances_list)
+        .concat(["sanctioned"]);
+
+    tab_list.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({"tab": button});
+        });
+    });
+
+    chars_trigger_list.forEach(trigger => {
+        on(`change:${trigger}`, function() {
+            getAttrs(chars_trigger_list, function(values) {
+                let update = {};
+                let initiative = 0; // perB + agB
+                let wounds = 0; // strB + tghB * 2 + wilB
+                let encumbrance = 0; // strB + tghB
+                let warp = 0;
+                let sanctioned = parseInt(values["sanctioned"])||0;
+                chars_list.forEach(char => {
+                    let start = parseInt(values[`starting_${char}`])||0;
+                    let advances = parseInt(values[`advances_${char}`])||0;
+                    let total = start + advances;
+                    let bonus = getBonus(total);
+                    if (char == "str") {
+                        wounds += bonus;
+                        encumbrance += bonus;
+                    } else if (char == "tgh") {
+                        wounds += bonus * 2;
+                        encumbrance += bonus;
+                    } else if (char == "per") {
+                        initiative += bonus;
+                    } else if (char == "ag") {
+                        initiative += bonus;
+                    } else if (char == "wil") {
+                        wounds += bonus;
+                        warp += sanctioned ? bonus * 2 : bonus;
+                    }
+                    update[`${char}`] = total;
+                    update[`${char}_bonus`] = bonus;
+
+                    skill_list.forEach(skill => {
+                        if (skill_data[skill]["char"] == char) {
+                            let sadvances = parseInt(values[`skill_advances_${skill}`])||0;
+                            let stotal = total + sadvances * 5;
+                            update[`${skill}`] = stotal;
+                        }
+                    });
+                });
+                update["initiative"] = initiative;
+                update["wounds_max"] = wounds;
+                update["encumbrance_max"] = encumbrance;
+                update["warp_charge_max"] = warp;
+                setAttrs(update);
+            });
+        });
+    });
+
+    on('sheet:opened', function(eventInfo) {
+        getAttrs(['encumbrance_current', 'wounds_current', 'warp_charge_current', 'migration_version'], function(values) {
+            const currentVersion = parseInt(values.migration_version) || 0;
+
+            // Only run if migration version is less than 1
+            if (currentVersion < 1) {
+                console.log('Running migration v1: Syncing current values...');
+                setAttrs({
+                    encumbrance: values.encumbrance_current || 0,
+                    wounds: values.wounds_current || 0,
+                    warp_charge: values.warp_charge_current || 0,
+                    migration_version: 1  // Mark v1 as complete
+                });
+            }
+        });
+    });
+
+    const getBonus = function(char) {
+        return Math.floor(char / 10);
+    };
+
+    skill_list.forEach(trigger => {
+        on(`change:${trigger}`, function() {
+            getSectionIDs("repeating_specialisations", function(idarray) {
+                let fields = [];
+                for (var i=0; i < idarray.length; i++) {
+                    let id = idarray[i];
+                    fields.push(`repeating_specialisations_${id}_specialisation_skill`);
+                    fields.push(`repeating_specialisations_${id}_specialisation_advances`);
+                }
+                getSectionIDs("repeating_weapons", function(idarray2) {
+                    for (var i=0; i < idarray2.length; i++) {
+                        let id = idarray2[i];
+                        fields.push(`repeating_weapons_${id}_weapon_specialisation`);
+                    }
+                    getSectionIDs("repeating_powers", function(idarray3) {
+                        for (var i=0; i < idarray3.length; i++) {
+                            let id = idarray3[i];
+                            fields.push(`repeating_powers_${id}_power_specialisation`);
+                        }
+                        getSectionIDs("repeating_specialisations2", function(idarray4) {
+                          for (var i=0; i < idarray4.length; i++) {
+                              let id = idarray4[i];
+                              fields.push(`repeating_specialisations2_${id}_specialisation2_name`);
+                              fields.push(`repeating_specialisations2_${id}_specialisation2_skill`);
+                              fields.push(`repeating_specialisations2_${id}_specialisation2_advances`);
+                              fields.push(`repeating_specialisations2_${id}_specialisation2_total`);
+                          }
+                          getAttrs(skill_list.concat(fields), function(values) {
+                              let update = {};
+                              for (var i=0; i < idarray3.length; i++) {
+                                  let id3 = idarray3[i];
+                                  let spec = values[`repeating_powers_${id3}_power_specialisation`];
+                                  let psychic = parseInt(values["psychic_mastery"])||0;
+                                  update[`repeating_powers_${id3}_power_total`] = psychic;
+                              }
+                              for (var i=0; i < idarray.length; i++) {
+                                  let id = idarray[i];
+                                  let skill = values[`repeating_specialisations_${id}_specialisation_skill`];
+                                  let advances = parseInt(values[`repeating_specialisations_${id}_specialisation_advances`])||0;
+                                  let total = (parseInt(values[`${skill}`])||0) + advances * 5;
+                                  update[`repeating_specialisations_${id}_specialisation_total`] = total;
+
+                                  if (["melee","ranged"].includes(skill)) {
+                                      for (var i=0; i < idarray2.length; i++) {
+                                          let id2 = idarray2[i];
+                                          let spec = values[`repeating_weapons_${id2}_weapon_specialisation`];
+                                          if (spec == skill) {
+                                              update[`repeating_weapons_${id2}_weapon_total`] = total;
+                                          }
+                                      }
+                                  } else if (skill == "psychic_mastery") {
+                                      for (var i=0; i < idarray3.length; i++) {
+                                          let id3 = idarray3[i];
+                                          let spec = values[`repeating_powers_${id3}_power_specialisation`];
+                                          spec = spec.replace("Minor (", "").replace(")", "");
+                                          if (spec == skill) {
+                                              update[`repeating_powers_${id3}_power_total`] = total;
+                                          }
+                                      }
+                                  }
+                              }
+                              for (var i=0; i < idarray4.length; i++) {
+                                let id = idarray4[i];
+                                let name = values[`repeating_specialisations2_${id}_specialisation2_name`];
+                                let skill = values[`repeating_specialisations2_${id}_specialisation2_skill`];
+                                let advances = parseInt(values[`repeating_specialisations2_${id}_specialisation2_advances`])||0;
+                                let total = (parseInt(values[`${skill}`])||0) + advances * 5;
+                                update[`repeating_specialisations2_${id}_specialisation2_total`] = total;
+                              }
+
+                              for (var i=0; i < idarray2.length; i++) {
+                                let id2 = idarray2[i];
+                                let spec = values[`repeating_weapons_${id2}_weapon_specialisation`];
+                                let melee = parseInt(values["melee"])||0;
+                                let ranged = parseInt(values["ranged"])||0;
+                                for (var j=0; j < idarray4.length; j++) {
+                                  let id4 = idarray4[j];
+                                  let spec_name4 = values[`repeating_specialisations2_${id4}_specialisation2_name`];
+
+                                  if (spec_name4 == spec) {
+                                    let skill4 = values[`repeating_specialisations2_${id4}_specialisation2_skill`];
+                                    let advances4 = parseInt(values[`repeating_specialisations2_${id4}_specialisation2_advances`])||0;
+                                    let total = (parseInt(values[`${skill4}`])||0) + advances4 * 5;
+
+                                    melee = total;
+                                    ranged = total;
+                                  }
+                                }
+
+                                if (melee_list.includes(spec)) {
+                                    update[`repeating_weapons_${id2}_weapon_total`] = melee;
+                                } else if (ranged_list.includes(spec)) {
+                                    update[`repeating_weapons_${id2}_weapon_total`] = ranged;
+                                }
+                              }
+                              setAttrs(update);
+                          });
+                        });
+                    });
+                });
+            });
+        });
+    });
+
+    on("change:repeating_specialisations", function(eventInfo) {
+            getSectionIDs("repeating_powers", function(idarray2) {
+                let fields = [];
+                for (var i=0; i < idarray2.length; i++) {
+                    let id = idarray2[i];
+                    fields.push(`repeating_powers_${id}_power_specialisation`);
+                }
+                getSectionIDs("repeating_specialisations", function(idarray4) {
+                  for (var i=0; i < idarray4.length; i++) {
+                      let id = idarray4[i];
+                      fields.push(`repeating_specialisations_${id}_specialisation_name`);
+                      fields.push(`repeating_specialisations_${id}_specialisation_skill`);
+                      fields.push(`repeating_specialisations_${id}_specialisation_advances`);
+                      fields.push(`repeating_specialisations_${id}_specialisation_total`);
+                  }
+                  getAttrs(skill_list.concat(fields)
+                      .concat([
+                          "repeating_specialisations_specialisation_name",
+                          "repeating_specialisations_specialisation_skill",
+                          "repeating_specialisations_specialisation_advances"
+                      ]), function(values) {
+                          let update = {};
+                          let name = values["repeating_specialisations_specialisation_name"];
+                          let skill = values["repeating_specialisations_specialisation_skill"];
+                          let advances = parseInt(values["repeating_specialisations_specialisation_advances"])||0;
+                          let total = (parseInt(values[`${skill}`])||0) + advances * 5;
+                          update[`repeating_specialisations_specialisation_total`] = total;
+
+                          for (var i=0; i < idarray2.length; i++) {
+                              let id = idarray2[i];
+                              let spec = values[`repeating_powers_${id}_power_specialisation`];
+                              spec = spec.replace("Minor (", "").replace(")", "");
+                              if (spec == name) {
+                                  update[`repeating_powers_${id}_power_total`] = total;
+                              }
+                          }
+                          setAttrs(update);
+                  });
+              });
+            });
+        });
+
+    on("change:repeating_specialisations2", function(eventInfo) {
+      getSectionIDs("repeating_weapons", function(idarray) {
+          let fields = [];
+          for (var i=0; i < idarray.length; i++) {
+              let id = idarray[i];
+              fields.push(`repeating_weapons_${id}_weapon_specialisation`);
+          }
+          getSectionIDs("repeating_specialisations2", function(idarray4) {
+            for (var i=0; i < idarray4.length; i++) {
+                let id = idarray4[i];
+                fields.push(`repeating_specialisations2_${id}_specialisation2_name`);
+                fields.push(`repeating_specialisations2_${id}_specialisation2_skill`);
+                fields.push(`repeating_specialisations2_${id}_specialisation2_advances`);
+                fields.push(`repeating_specialisations2_${id}_specialisation2_total`);
+            }
+            getAttrs(skill_list.concat(fields)
+                .concat([
+                    "repeating_specialisations2_specialisation2_name",
+                    "repeating_specialisations2_specialisation2_skill",
+                    "repeating_specialisations2_specialisation2_advances"
+                ]), function(values) {
+                    let update = {};
+                    let name = values["repeating_specialisations2_specialisation2_name"];
+                    let skill = values["repeating_specialisations2_specialisation2_skill"];
+                    let advances = parseInt(values["repeating_specialisations2_specialisation2_advances"])||0;
+                    let total = (parseInt(values[`${skill}`])||0) + advances * 5;
+                    update[`repeating_specialisations2_specialisation2_total`] = total;
+
+                    for (var i=0; i < idarray.length; i++) {
+                        let id = idarray[i];
+                        let spec = values[`repeating_weapons_${id}_weapon_specialisation`];
+                        if (spec == name) {
+                            update[`repeating_weapons_${id}_weapon_total`] = total;
+                        }
+                    }
+                    setAttrs(update);
+                });
+            });
+        });
+    });
+
+    const repeating_data = {
+        "repeating_weapons": ["specialisation","damage"],
+        "repeating_powers": ["specialisation"]
+    };
+    Object.keys(repeating_data).forEach(repeater => {
+        let key = repeater.replace("repeating_", "");
+        key = key.slice(0, key.length - 1);
+        let triggers = [];
+        let trigger_fields = [];
+        repeating_data[repeater].forEach(trigger => {
+            triggers.push(`change:${repeater}:${key}_${trigger}`);
+            trigger_fields.push(`${repeater}_${key}_${trigger}`);
+        });
+        triggers = triggers.join(" ");
+        on(triggers, function(eventInfo) {
+            getSectionIDs("repeating_specialisations", function(idarray) {
+                let fields = [];
+                for (var i=0; i < idarray.length; i++) {
+                    let id = idarray[i];
+                    fields.push(`repeating_specialisations_${id}_specialisation_name`);
+                    fields.push(`repeating_specialisations_${id}_specialisation_total`);
+                }
+              getSectionIDs("repeating_specialisations2", function(idarray5) {
+                  for (var i=0; i < idarray5.length; i++) {
+                      let id = idarray5[i];
+                      fields.push(`repeating_specialisations2_${id}_specialisation2_name`);
+                      fields.push(`repeating_specialisations2_${id}_specialisation2_skill`);
+                      fields.push(`repeating_specialisations2_${id}_specialisation2_advances`);
+                      fields.push(`repeating_specialisations2_${id}_specialisation2_total`);
+                  }
+                getAttrs(skill_list.concat(fields)
+                    .concat(["str_bonus"]).concat(trigger_fields), function(values) {
+                    let update = {};
+                    let spec = values[`${repeater}_${key}_specialisation`];
+                    let melee = parseInt(values["melee"])||0;
+                    let ranged = parseInt(values["ranged"])||0;
+                    let psychic = parseInt(values["psychic_mastery"])||0;
+                    let test = 0;
+                    spec = repeater == "repeating_powers" ?
+                        spec.replace("Minor (", "").replace(")", "") :
+                        spec;
+                    for (var i=0; i < idarray.length; i++) {
+                        let id = idarray[i];
+                        let name = values[`repeating_specialisations_${id}_specialisation_name`];
+                        let total = parseInt(values[`repeating_specialisations_${id}_specialisation_total`])||0;
+                        if (name == spec) {
+                            test = total
+                            break;
+                        }
+                    }
+                    if (repeater == "repeating_weapons") {
+                        test = test == 0 && melee_list.includes(spec) ? melee :
+                            test == 0 && ranged_list.includes(spec) ? ranged :
+                            test;
+
+                          for (var i=0; i < idarray5.length; i++) {
+                              let id = idarray5[i];
+                              let name = values[`repeating_specialisations2_${id}_specialisation2_name`];
+                              let advances = values[`repeating_specialisations2_${id}_specialisation2_advances`];
+                              let total = parseInt(values[`repeating_specialisations2_${id}_specialisation2_total`])||0;
+
+                              if (name == spec) {
+                                  test = total
+                                  break;
+                              }
+                          }
+                    } else if (repeater == "repeating_powers") {
+                        test = test == 0 ? psychic : test;
+                    }
+                    update[`${repeater}_${key}_total`] = test;
+                    if (`${repeater}_${key}_damage` in values) {
+                        let damage = parseInt(values[`${repeater}_${key}_damage`])||0;
+                        let strb = parseInt(values["str_bonus"])||0;
+                        damage = melee_list.includes(spec) ? damage + strb : damage;
+                        update[`${repeater}_${key}_damage_total`] = damage;
+                    }
+                    setAttrs(update);
+                });
+              });
+            });
+        });
+    });
+
+const test_list = ["superiority","psychic_focus","roll_visibility"];
+    const button_list = chars_list.concat(skill_list).concat(npc_chars_list);
+    button_list.forEach(trigger => {
+        on(`clicked:${trigger}`, function(eventInfo) {
+            const field = eventInfo["triggerName"] ?
+                eventInfo["triggerName"].replace("clicked:", "") : "";
+            let reroll = field;
+
+            let skill_name = chars_list.includes(field) ?
+                (getTranslationByKey(chars_data[field]["i18n"]) || chars_data[field]["name"]) :
+                skill_list.includes(field) ?
+                (getTranslationByKey(skill_data[field]["i18n"]) || skill_data[field]["name"]) :
+                npc_chars_list.includes(field) ?
+                (getTranslationByKey(chars_data[field.replace("npc_","")]["i18n"]) ||
+                 chars_data[field.replace("npc_","")]["name"]) : "";
+            if (!skill_name) return;
+
+            getAttrs(test_list.concat(button_list), function(values) {
+                let skill_total = parseInt(values[`${field}`])||0;
+                let superiority = parseInt(values["superiority"])||0;
+
+                rollTest(reroll, skill_name, skill_total, superiority);
+            });
+        });
+    });
+
+    const repeating_list = ["repeating_specialisations","repeating_specialisations2","repeating_weapons",
+        "repeating_powers","repeating_npcskills","repeating_npcattacks"];
+    repeating_list.forEach(trigger => {
+        on(`clicked:${trigger}:action`, function(eventInfo) {
+            const source = eventInfo["sourceAttribute"] ? eventInfo["sourceAttribute"] : "";
+            let reroll = source ? source : "roll";
+            let key = trigger.replace("repeating_", "");
+            key = key.slice(0, key.length - 1);
+
+            if (key == 'specialisations') {
+              key = 'specialisation2';
+            }
+
+            getAttrs(test_list.concat([
+                    `${trigger}_${key}_name`,
+                    `${trigger}_${key}_total`,
+                    `${trigger}_${key}_damage_total`,
+                    `${trigger}_${key}_damage_info`
+                ]), function(values) {
+                let skill_name = values[`${trigger}_${key}_name`];
+                if (trigger == "repeating_specialisations2" && stored_value_i18n[skill_name]) {
+                    skill_name = getTranslationByKey(stored_value_i18n[skill_name]) || skill_name;
+                }
+                let skill_total = parseInt(values[`${trigger}_${key}_total`])||0;
+                let superiority = parseInt(values["superiority"])||0;
+                let slmod = trigger == "repeating_powers" ? (parseInt(values["psychic_focus"])||0) : 0;
+                let dmg = parseInt(values[`${trigger}_${key}_damage_total`])||-1;
+                let dmg_info = values[`${trigger}_${key}_damage_info`];
+                let critfum = trigger == "repeating_weapons";
+
+                rollTest(reroll, skill_name, skill_total, superiority, dmg, dmg_info, slmod, critfum);
+            });
+        });
+    });
+
+    const rollTest = function(reroll, skill_name, skill_total, superiority, dmg=-1, dmgi="", slmod=0, critfum=false) {
+        const tr = (key, fallback) => getTranslationByKey(key) || fallback;
+        const diff_query = `?{${tr("difficulty", "Difficulty")}|${tr("difficulty-challenging", "Challenging (+0)")},0|${tr("difficulty-very-easy", "Very Easy (+60)")},60|${tr("difficulty-easy", "Easy (+40)")},40|${tr("difficulty-routine", "Routine (+20)")},20|${tr("difficulty-difficult", "Difficult (-10)")},-10|${tr("difficulty-hard", "Hard (-20)")},-20|${tr("difficulty-very-hard", "Very Hard (-30)")},-30}`;
+        const circ_query = `?{${tr("circumstances", "Circumstances")}|${tr("no-advantage", "No Advantage")},0|${tr("advantage", "Advantage")},1|${tr("disadvantage", "Disadvantage")},-1}`;
+        let dmg_roll = "";
+        let dmg_info = dmgi ? ` {{damage_info=${dmgi}}}` : "";
+        let hitloc = "";
+        let adjustedsl = slmod > 0 ? ` {{adjustedsl=+${slmod}}}` :
+            slmod < 0 ? ` {{adjustedsl=${slmod}}}` : "";
+        if (dmg > -1) {
+            dmg_roll = ` {{damage=[[${dmg}]]}}`;
+        }
+        if (dmg > -1 || dmgi) {
+            hitloc = ` {{hitlocation=[[0]]}}`;
+        }
+
+        getAttrs(["roll_visibility"], function(vis) {
+            let rollPrefix = vis.roll_visibility === "gm" ? "/w gm " : "";
+
+            startRoll(`${rollPrefix}&{template:imtest} {{reroll=[^{reroll}](~${reroll})}} `
+                .concat(`{{name=@{character_name}}} {{skill_name=${skill_name}}} `)
+                .concat(`{{skill_total=[[${skill_total}]]}} {{difficulty=[[${diff_query}]]}} `)
+                .concat(`{{result=[[1d100]]}} {{circ_value=[[${circ_query}]]}} {{circumstances=[[0]]}}${dmg_roll}${dmg_info}${hitloc} `)
+                .concat(`{{sl=[[0]]}} {{sl_info=[[0]]}} {{critical=[[0]]}} {{fumble=[[0]]}}${adjustedsl}`)
+                .concat(`{{superiority=${superiority}}}`), (results) => {
+                const result = results.results.result.result;
+                let digits = result.toString().split('').map(Number);
+                if (digits.length == 1) {
+                    digits.push(0);
+                }
+                const difficulty = results.results.difficulty.result;
+                const diff_name = getTranslationByKey(diff_data[`${difficulty}`]["i18n"]) || diff_data[`${difficulty}`]["name"];
+                const circ = results.results.circ_value.result;
+
+                let circ_bonus = 0;
+                let circ_text = "";
+                if (circ > 0) {
+                    circ_bonus = (circ - 1) * 10;
+                    circ_text = getTranslationByKey("advantage") || "Advantage";
+                    circ_text += circ_bonus > 0 ? ` (+${circ_bonus})` : "";
+                } else if (circ < 0) {
+                    circ_bonus = (circ + 1) * 10;
+                    circ_text = getTranslationByKey("disadvantage") || "Disadvantage";
+                    circ_text += circ_bonus < 0 ? ` (${circ_bonus})` : "";
+                }
+
+                let final_result = result;
+                let final_total = skill_total + difficulty;
+                let final_sl = getSl(final_total, final_result, slmod, superiority);
+                if (circ != 0) {
+                    final_total += circ_bonus;
+
+                    let hi_result = result == 100 ? 100 :
+                        Math.min(...digits) * 10 + Math.max(...digits);
+                    let hi_sl = getSl(final_total, hi_result, slmod, superiority);
+
+                    let lo_result = result == 100 ? 100 :
+                        Math.max(...digits) * 10 + Math.min(...digits);
+                    let lo_sl = getSl(final_total, lo_result, slmod, superiority);
+
+                    if ((circ > 0 && parseInt(hi_sl) >= parseInt(lo_sl)) ||
+                        (circ < 0 && parseInt(hi_sl) <= parseInt(lo_sl))) {
+                        final_result = hi_result;
+                        final_sl = hi_sl;
+                    } else if ((circ > 0 && parseInt(lo_sl) >= parseInt(hi_sl)) ||
+                        (circ < 0 && parseInt(lo_sl) <= parseInt(hi_sl))) {
+                        final_result = lo_result;
+                        final_sl = lo_sl;
+                    }
+                }
+                let final_sl_info = getSlInfo(final_sl);
+
+                let crit = critfum && final_result <= final_total && final_result % 10 == Math.floor(final_result / 10) ? 1 : 0;
+                let fumb = critfum && final_result > final_total && final_result % 10 == Math.floor(final_result / 10) ? 1 : 0;
+                let u = final_result % 10;
+                let hitlocation = `${u}, ${getTranslationByKey(hitloc_data[u]["i18n"]) || hitloc_data[u]["name"]}`;
+                finishRoll(
+                    results.rollId,
+                    {
+                        "circ_value": circ,
+                        "result": final_result,
+                        "difficulty": diff_name,
+                        "skill_total": final_total,
+                        "sl": final_sl,
+                        "sl_info": final_sl_info,
+                        "critical": crit,
+                        "fumble": fumb,
+                        "hitlocation": hitlocation,
+                        "circumstances": circ_text
+                    }
+                );
+            });
+        });
+    };
+
+    const getSl = function(skill, result, mod, superiority) {
+        let sl = Math.floor(skill / 10) - Math.floor(result / 10) + superiority;
+        sl += mod;
+        if ((result >= 96) && (sl > 0)) { // && skill > result) {
+            sl = `-0`;
+        } else if ((result <= 5) && (sl < 1)) { // && skill < result) {
+            sl = `+0`;
+        } else if (sl == 0 && (result <= skill || mod > 0)) {
+            sl = `+${sl}`;
+        } else if (sl == 0) {
+            sl = `-${sl}`;
+        } else if (sl > 0) {
+            sl = `+${sl}`;
+        } else {
+            sl = `${sl}`;
+        }
+        return sl;
+    };
+
+    const getSlInfo = function(sl) {
+        let key = "";
+        let fallback = "";
+        let isl = parseInt(sl)||0;
+        if (isl >= 5) {
+            key = "result-astounding-success"; fallback = "Astounding Success";
+        } else if (isl >= 3) {
+            key = "result-impressive-success"; fallback = "Impressive Success";
+        } else if (isl >= 1) {
+            key = "result-success"; fallback = "Success";
+        } else if (isl == 0) {
+            key = sl == "+0" ? "result-marginal-success" : "result-marginal-failure";
+            fallback = sl == "+0" ? "Marginal Success" : "Marginal Failure";
+        } else if (isl >= -2) {
+            key = "result-failure"; fallback = "Failure";
+        } else if (isl >= -4) {
+            key = "result-impressive-failure"; fallback = "Impressive Failure";
+        } else {
+            key = "result-astounding-failure"; fallback = "Astounding Failure";
+        }
+        return getTranslationByKey(key) || fallback;
+    }
+
+    const patron_data = {
+        "Adeptus Administratum": [
+            {"value": "Departmento Munitorum Ordinate"},
+            {"value": "Tithe Prefectus"}
+        ],
+        "Adeptus Astra Telepathica": [
+            {"value": "Astropath"},
+            {"value": "Sister of Silence"}
+        ],
+        "Adeptus Mechanicus": [
+            {"value": "Forge Lord"},
+            {"value": "Magos Biologis"}
+        ],
+        "Adeptus Ministorum": [
+            {"value": "Arch-Confessor"},
+            {"value": "Sororitas Canoness"}
+        ],
+        "Astra Militarum": [
+            {"value": "Lord-Commissar"},
+            {"value": "Senior Officer"}
+        ],
+        "Imperial Fleet": [
+            {"value": "Voidship Captain"},
+            {"value": "Port Commander"}
+        ],
+        "Infractionist": [
+            {"value": "Criminal Mastermind"},
+            {"value": "Merchant Guilder"}
+        ],
+        "The Inquisition": [
+            {"value": "Ordo Xenos Inquisitor"},
+            {"value": "Ordo Hereticus Inquisitor"}
+        ],
+        "Rogue Trader Dynasty": [
+            {"value": "Diplomat"},
+            {"value": "Trader Militant"}
+        ]
+    }
+</script>
+
+<rolltemplate class="sheet-rolltemplate-imtest">
+    <div class="container">
+        <p data-i18n="incoming-transmission">++Incoming Transmission++</p>
+        <h1>{{name}}:
+            {{computed::result}},
+            {{computed::sl}} <span data-i18n="success-level-abbr">SL</span>
+        </h1>
+        {{#rollGreater() computed::result 95}}
+            <p>//<strong data-i18n="automatic-failure">Automatic Failure</strong></p>
+        {{/rollGreater() computed::result 95}}
+        {{#rollLess() computed::result 6}}
+            <p>//<strong data-i18n="automatic-success">Automatic Success</strong></p>
+        {{/rollLess() computed::result 6}}
+        {{#rollBetween() computed::result 6 95}}
+            <p>//{{computed::sl_info}}</p>
+        {{/rollBetween() computed::result 6 95}}
+        {{#rollTotal() computed::critical 1}}
+            <p><strong>//<span data-i18n="critical">Critical</span></strong></p>
+        {{/rollTotal() computed::critical 1}}
+        {{#rollTotal() computed::fumble 1}}
+            <p><strong>//<span data-i18n="fumble">Fumble</span></strong></p>
+        {{/rollTotal() computed::fumble 1}}
+        <p>{{skill_name}}: {{skill_total}}%</p>
+        <p>//{{computed::difficulty}}</p>
+        {{#adjustedsl}}
+            <p>//<span data-i18n="adjusted-sl">Adjusted SL</span>: {{adjustedsl}}</p>
+        {{/adjustedsl}}
+        {{#rollGreater() computed::circ_value 0}}
+            <p>//{{computed::circumstances}}</p>
+        {{/rollGreater() computed::circ_value 0}}
+        {{#rollLess() computed::circ_value 0}}
+            <p>//{{computed::circumstances}}</p>
+        {{/rollLess() computed::circ_value 0}}
+        <p><span data-i18n="test-adjusted-to">Test adjusted to</span> {{computed::skill_total}}%</p>
+        {{#rollGreater() computed::circ_value 0}}
+            <p>//<span data-i18n="unmodified-roll">Unmodified roll</span>: {{result}}</p>
+        {{/rollGreater() computed::circ_value 0}}
+        {{#rollLess() computed::circ_value 0}}
+            <p>//<span data-i18n="unmodified-roll">Unmodified roll</span>: {{result}}</p>
+        {{/rollLess() computed::circ_value 0}}
+        {{#rollLess() superiority 1 }}
+        {{#superiority}}
+            <p>//<span data-i18n="superiority">Superiority</span>: {{superiority}}</p>
+        {{/superiority}}
+        {{/rollLess() superiority 1 }}
+        {{#damage}}
+            <p><span data-i18n="attack">Attack</span>:</p>
+            <p>-<span data-i18n="damage">Damage</span>- {{damage}} {{computed::sl}} <span data-i18n="success-level-abbr">SL</span></p>
+            <p>-<span data-i18n="hit-location">Hit Location</span>- {{computed::hitlocation}}</p>
+        {{/damage}}
+        {{^damage}}
+            {{#damage_info}}
+                <p><span data-i18n="attack">Attack</span>:</p>
+                <p>-<span data-i18n="damage">Damage</span>- {{damage_info}}</p>
+                <p>-<span data-i18n="hit-location">Hit Location</span>- {{computed::hitlocation}}</p>
+            {{/damage_info}}
+        {{/damage}}
+        <p data-i18n="end-transmission">++End Transmission++</p>
+        <div class="options">
+            {{reroll}}
+        </div>
+    </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-imbasic">
+    <div class="container">
+        <p data-i18n="incoming-transmission">++Incoming Transmission++</p>
+        <h1>{{name}}: {{#result}}{{result}}, {{/result}}{{topic}}</h1>
+        {{#info}}
+            <p>{{info}}</p>
+        {{/info}}
+        <p data-i18n="end-transmission">++End Transmission++</p>
+        <div class="options">
+            {{reroll}}
+        </div>
+    </div>
+</rolltemplate>

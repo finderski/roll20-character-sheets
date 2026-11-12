@@ -1,0 +1,17 @@
+name: Validate Sheet Requirements
+description: Checks a character sheet pull request and reports the result on it.
+
+inputs:
+  github-token:
+    description: Token used to comment, label, request reviewers and set the commit status.
+    default: ${{ github.token }}
+  sheet-list-url:
+    description: Address of the Roll20 sheet list used to spot new sheets.
+    default: ""
+  only-sheet-changes:
+    description: Set to "true" to ignore changed files outside sheet folders that are not advanced, and pass when none are left.
+    default: "false"
+
+runs:
+  using: node24
+  main: dist/index.js

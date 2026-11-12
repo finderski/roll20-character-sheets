@@ -1,0 +1,613 @@
+	
+		.mastercontainer {
+		  border: 1px outset black; 
+		  align: center;	
+		  font-family: Arial, sans-serif;
+		  font-weight: 400;
+		  width: 840px;
+		  background-image: url("https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/ESTIRPE-base-fondo.jpg");
+		  margin: 0 auto;
+	      display: grid;
+	      grid-template-columns: 1fr;
+		}
+	
+		
+		.HeaderDiv {
+		  border: 1px outset black;  
+		  text-align: center;
+		  max-width: 840px;
+		  margin: auto;
+		  padding-bottom: 10px;		  
+		}
+
+		.myDiv {
+		  border: 1px outset black;   
+		  text-align: left;
+		  max-width: 840px;
+		  margin: 0 auto;
+		  padding-bottom: 10px;
+		}
+
+		.invisiblediv {
+  		  border: 0px outset #565656;   
+  		  text-align: left;
+  		  max-width: 840px;
+		  padding: 5px;
+		}
+		
+		.onecolumn {
+	      display: grid;
+	      grid-template-columns: 1fr;
+		}
+		
+		.twocolumns {
+	      display: grid;
+	      grid-template-columns: 1fr 1fr;
+		}
+		
+		.threecolumns {
+	      display: grid;
+	      grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		
+		.myDivCenter {
+		  border: 0px outset black; 
+		  text-align: center;
+		  margin: 0 auto;
+		  grid-column: span 3; 
+		  padding-bottom: 10px;
+		}
+
+		.cell {
+		    display: table-cell;
+		    border: 1px;
+		    padding: 8px;
+		        }       
+		
+		.cellarmas {
+			display: table-cell;
+			border: 1px;
+			padding: 3px;
+			  }    
+			   
+		.cellmgn {
+			  	display: table-cell;
+			  	border: 1px solid #000000;
+			  	padding: 3px;
+		  		text-align: center;		
+			  	  }    
+						   
+		.celllogo {	
+				  	padding: 3px;
+				  	text-align: center;	
+					vertical-align: top;
+				  	  }    
+
+		.cell-encabezado {
+		            display: table-cell;
+		            border: 1px solid #ddd;
+		            padding: 8px;
+		            background-color: black;
+		  			color: white;
+		  			text-align: left;
+		            font-family: Arial, sans-serif;
+		            font-weight: bold;
+		            font-size: 18px;
+		            border-radius: 7px;
+					max-width: 840px;
+		        }
+
+		.cell-encabezado-mgn {
+				            display: table-cell;
+				            border: 1px solid #ddd;
+				            padding: 6px;
+				            background-color: black;
+				  			color: white;
+				  			text-align: center;
+				            font-family: Arial, sans-serif;
+				            font-weight: bold;
+				            font-size: 14px;
+				            border-radius: 7px;
+							max-width: 840px;
+				        }					
+							
+			   		.cell-espec {
+			   			padding-top: 8px;
+			   			padding-bottom: 8px;
+			   			}	
+			
+				
+
+			   		.whitetext {
+			   			color: #fff;
+			   			}
+									
+									
+		input[type='number'].charstat {
+		width: 14px;
+		color: #800080;
+		background-color: #fff;		
+		font-size: 18px;
+		text-align: right;
+		border-radius: 7px;
+		}
+
+		input[type='number'].basicbox {
+		background-color: #fff;
+		}
+		
+		input[type='text'].sheetfield {
+		width: 180px;
+		background-color: #fff;		
+		font-size: 14px;
+		text-align: left;
+		border-radius: 7px;
+		}
+
+		input[type='text'].descriptor {
+		width: 580px;
+		background-color: #fff;		
+		font-size: 14px;
+		text-align: left;
+		border-radius: 7px;
+		}
+
+		button[type=roll].sheet-d6-dice::before {
+		    font-family: 'dicefontd6';
+		    content: 'a';
+		}
+
+
+
+		/* Limitar tamaño de TEXTAREA para la descripción */
+		textarea {
+		  width: 45%;
+		  height: 120px;
+		  padding: 6px 6px;
+		  box-sizing: border-box;
+		  border: 2px solid #ccc;
+		  border-radius: 7px;
+		  background-color: #fff;		  
+		  font-size: 14px;
+		  resize: none;
+		}
+
+		.expanded {
+		  width: 800px;
+		}
+
+		/* Limitar la anchura de los SELECT numéricos y sus OPTIONS */
+		select.numeric {
+		  width: 60px;
+		  background-color: #fff;		  
+		}
+
+		option.numeric {
+		  width: 60px;
+		  background-color: #fff;		  
+		}
+
+
+
+
+
+		input[type="checkbox"].vitalitybox {
+		   	width: 40px;
+		   	height: 40px;
+			background-color: #fff;			
+		   	appearance: none;
+		   	-webkit-appearance: none;
+		   	-moz-appearance: none;
+		   	background-size: cover;
+		  	border: 1px solid #ccc;
+		  	cursor: pointer;
+		}
+
+		input[type="checkbox"].vitalityboxgray {
+			background-color: #dedede;
+		}
+
+
+		.vita6 {
+			background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-6tr.png') no-repeat center center;
+		}
+		.vita5 {
+			background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-5tr.png') no-repeat center center;
+		}
+		.vita4 {
+			background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-4tr.png') no-repeat center center;
+		}
+		.vita3 {
+			background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-3tr.png') no-repeat center center;
+		}
+		.vita2 {
+			background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-2tr.png') no-repeat center center;
+		}
+		.vita1 {
+			background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-1tr.png') no-repeat center center;
+		}
+
+		.vita12 {
+				background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-12tr.png') no-repeat center center;	
+		}	
+		.vita34 {
+				background: url('https://raw.githubusercontent.com/shadowlandsgames/roll20assets/main/img/d6-face-34tr.png') no-repeat center center;	
+		}		
+		
+
+
+		input[type="checkbox"].vitalitybox:checked {
+			background-color: black;
+			background-size: cover;
+
+		}
+
+
+		/* DICE fonts - d6 faces are a b c d e f */
+
+		/* Dice button appearance */
+		.ui-dialog .tab-content .charsheet button[type=roll].d6-button::before 
+		
+		{
+		    font-family: "dicefontd6";
+		    content: "f";
+		}
+
+		/* Non-roll button appearance */
+		.ui-dialog .tab-content .charsheet button[type=roll].nonroll-button::before 
+		
+		{
+		    font-family: "Pictos";
+		    content: "E";
+		}
+
+		/* Initiative button appearance */
+		.ui-dialog .tab-content .charsheet button[type=roll].initiative-button::before 
+		
+		{
+		    font-family: "Pictos";
+		    content: "9";
+		}
+
+		/* Toggle visibility */
+		.charsheet .sheet-columns {
+		  display: flex;
+		  justify-content: space-between;
+		  width: 400px;
+		}
+		.charsheet .sheet-columns > * {
+		  flex: 1;
+		}
+
+		.charsheet input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+		.charsheet input.sheet-toggle-hide:checked ~ div.sheet-body {
+		    display: none;
+		}
+
+
+
+		/* PASOS HACIA EL UMBRAL - AUTO FILL TO THE LEFT */
+		
+		/* Make original dots and checkboxes invisible */
+
+		input[type="radio"].registropasos,
+
+		input[type="checkbox"].registropasos
+
+		{
+		    position: absolute;
+		    opacity: 0.0;
+		    width: 15px;
+		    cursor: pointer;
+		    z-index: 9;
+		    margin-top: 5px;
+		}
+
+ 
+
+ 
+
+		/* Style for both fake dots and checkboxes */
+
+ 
+
+		input[type="radio"].registropasos + span::before,
+
+		input[type="checkbox"].registropasos + span::before,
+
+		.sheet-permadot::before
+
+		{
+			border: solid 1px #000000;
+		    line-height: 11px;
+		    text-align: center;
+		    display: inline-block;
+		    vertical-align: middle; 
+		    -moz-box-shadow: 0 0 0px #000;
+		    -webkit-box-shadow: 0 0 0px #000;
+		    box-shadow: 0 0 0px #000;
+
+		    background: #000000;
+		    background: -moz-radial-gradient(#f6f6f6, #dfdfdf);
+		    background: -webkit-radial-gradient(#f6f6f6, #dfdfdf);
+		    background: -ms-radial-gradient(#f6f6f6, #dfdfdf);
+		    background: -o-radial-gradient(#f6f6f6, #dfdfdf);
+		    background: radial-gradient(#f6f6f6, #dfdfdf);
+		}
+
+ 
+
+		/* Style for fake dots (CHECKED AND to the left) */
+
+		input[type="radio"].registropasos + span::before,
+
+		.sheet-permadot::before
+
+		{
+		    content: "•";
+		    width: 10px;
+		    height: 10px;
+		    font-size: 42px;
+		    font-family: "Arial";
+		    text-indent: -2px;
+		    font-weight: normal;
+
+		    -webkit-font-smoothing: antialiased;
+		    -moz-border-radius: 50%;
+		    -webkit-border-radius: 50%;
+		    border-radius: 50%;
+		}
+
+ 
+
+		/* Style for fake UNCHECKED checkboxes */
+
+		input[type="checkbox"].registropasos + span::before
+
+		{
+		    position:relative;
+		    content: "";
+		    opacity: 1.0;
+		    width: 10px;
+		    height: 10px;
+		    font-size: 12px;
+
+		    -moz-border-radius: 1px;
+		    -webkit-border-radius: 1px;
+		    border-radius: 1px;
+		}
+
+ 
+
+		/* Style for fake CHECKED checkboxes */
+
+		input[type="checkbox"].registropasos:checked + span::before
+
+		{
+		    background:
+
+		        linear-gradient(to top left,
+
+		           rgba(0,0,0,0) 0%,
+		           rgba(0,0,0,0) calc(50% - 0.8px),
+		           rgba(0,0,0,1) 50%,
+		           rgba(0,0,0,0) calc(50% + 0.8px),
+		           rgba(0,0,0,0) 100%),
+
+		       linear-gradient(to top right,
+
+		           rgba(0,0,0,0) 0%,
+		           rgba(0,0,0,0) calc(50% - 0.8px),
+		           rgba(0,0,0,1) 50%,
+		           rgba(0,0,0,0) calc(50% + 0.8px),
+		           rgba(0,0,0,0) 100%);
+
+		    -moz-box-shadow: 0 0 2px transparent;
+		    -webkit-box-shadow: 0 0 2px transparent;
+		    box-shadow: 0 0 2px transparent;
+		}
+
+ 
+
+		/* Remove dot to the right of selected */
+
+		input[type="radio"].registropasos:checked ~ input[type="radio"] + span::before 
+		
+		{  
+		    content: "";
+		}
+
+		input.pasosblank:checked + span::before 
+		
+		{
+		    opacity: 0;
+		}
+
+		input.pasosblank:hover + span::before 
+		
+		{
+		    opacity: 0.25;
+		    font-size: 12px;
+		    content: "x";
+		    text-indent: 0.5px;
+		}
+
+		input.pasosblank + span::before 
+		
+		{
+		    opacity: 0;
+		}
+
+ 
+
+		/* Identificador - en Estirpe de Dunwich es siempre NEGRO */
+		
+				.sheet-rolltemplate-generic.sheet-rolltemplate-color-black {
+				    background-color: #000000;
+				}
+				
+				
+				
+		/* TIRADAS */
+
+	
+				/* Normal inline roll */
+				.sheet-rolltemplate-resultados .inlinerollresult {
+				    background-color: #000 !important;
+				    color: #fff !important;
+				    border: 1px solid #000 !important;
+				    border-radius: 3px;
+				}
+
+				/* Critical success */
+				.sheet-rolltemplate-resultados .inlinerollresult.fullcrit {
+		 		    background-color: #000 !important;
+		 		    color: #fff !important;
+				    border-color: #398b35 !important;
+				}
+
+				/* Critical failure */
+				.sheet-rolltemplate-resultados .inlinerollresult.fullfail {
+		 		    background-color: #000 !important;
+		 		    color: #fff !important;
+				    border-color: #b52b2b !important;
+				}
+
+				/* Important roll */
+				.sheet-rolltemplate-resultados .inlinerollresult.importantroll {
+		 		    background-color: #000 !important;
+		 		    color: #fff !important;
+				    border-color: #467bb5 !important;
+				}
+		
+				/* Normal inline roll DARK MODE */
+				.sheet-rolltemplate-resultados.sheet-rolltemplate-darkmode .inlinerollresult {
+				    background-color: #000 !important;
+				    color: #fff !important;
+				    border: 1px solid #000 !important;
+				    border-radius: 3px;
+				}
+
+				/* Critical success DARK MODE */
+				.sheet-rolltemplate-resultados.sheet-rolltemplate-darkmode .inlinerollresult.fullcrit {
+		 		    background-color: #000 !important;
+		 		    color: #fff !important;
+				    border-color: #398b35 !important;
+				}
+
+				/* Critical failure DARK MODE */
+				.sheet-rolltemplate-resultados.sheet-rolltemplate-darkmode .inlinerollresult.fullfail {
+		 		    background-color: #000 !important;
+		 		    color: #fff !important;
+				    border-color: #b52b2b !important;
+				}
+
+				/* Important roll DARK MODE */
+				.sheet-rolltemplate-resultados.sheet-rolltemplate-darkmode .inlinerollresult.importantroll {
+		 		    background-color: #000 !important;
+		 		    color: #fff !important;
+				    border-color: #467bb5 !important;
+				}		
+				
+		
+		 
+/* Roll templates standard */
+		
+				.sheet-rolltemplate-container {
+					border: 5px solid #555 !important;
+					border-radius: 0px 0px 0px 0px;
+				    	align: center;
+			         	text-align: center;	
+			         	align-items: center;
+			         	justify-content: center;	
+					color: #fff;
+				}
+
+				.sheet-rolltemplate-topoftab {
+					background-color: #e8f3ed; 		
+					color: #fff; 		
+					border-radius: 0px 0px 0px 0px;
+				}
+				.sheet-rolltemplate-pclabel {				
+					font-size: 18px; 
+					padding-top: 4px; 
+					padding-bottom: 4px;
+					border-radius: 7px;
+				}
+				.sheet-rolltemplate-rolllabel {
+					background-color: #555; 			
+					color: #fff; 		
+					font-size: 16px; 
+					font-weight: bold;
+					border-radius: 7px;
+				}
+				.sheet-rolltemplate-fondoclaro {
+					background-color: #e8f3ed;
+				}
+				.sheet-rolltemplate-fondogrisoscuro {
+					background-color: #555;
+					border-radius: 7px;
+				}		
+				.sheet-rolltemplate-textonegro {
+					color: #000;
+				}
+				.sheet-rolltemplate-textoblanco {
+					color: #fff;
+				}
+						
+				.sheet-rolltemplate-darkmode.sheet-rolltemplate-topoftab {
+					background-color: #e8f3ed; 		
+					color: #fff; 		
+					border-radius: 0px 0px 0px 0px;
+				}
+				.sheet-rolltemplate-darkmode.sheet-rolltemplate-pclabel {				
+					font-size: 18px; 
+					padding-top: 4px; 
+					padding-bottom: 4px;
+					border-radius: 7px;
+				}
+				.sheet-rolltemplate-darkmode.sheet-rolltemplate-rolllabel {
+					background-color: #555; 			
+					color: #fff; 		
+					font-size: 16px; 
+					font-weight: bold;
+					border-radius: 7px;
+				}
+				.sheet-rolltemplate-darkmode.sheet-rolltemplate-fondoclaro {
+					background-color: #e8f3ed;
+				}
+				.sheet-rolltemplate-darkmode.sheet-rolltemplate-fondogrisoscuro {
+					background-color: #555;
+					border-radius: 7px;
+				}		
+				.sheet-rolltemplate-darkmode.sheet-rolltemplate-textonegro {
+					color: #000;
+				}
+				.sheet-rolltemplate-darkmode.sheet-rolltemplate-textoblanco {
+					color: #fff;
+				}
+				
+						.sheet-rolltemplate-generic {
+				 		    box-sizing: border-box;
+				 		    -ms-flex: 0 0 auto;
+				 		    -webkit-box-flex: 0;
+						    display: grid;
+				 		    padding-right: 2rem;
+				 		    padding-left: 2rem;
+						    min-width: 0;
+						    min-height: 0;
+					    	    width: 100%;
+						    align: center;
+					         text-align: center;	
+					         align-items: center;
+					         justify-content: center;		
+						}
+
+				
+						.sheet-rolltemplate-generic-dospordos {
+						    display: grid;
+						    grid-template-columns: 1fr 1fr;
+						}		
+
+		

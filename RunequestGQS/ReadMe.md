@@ -34,6 +34,15 @@ To remove the experience checkbox from a skill add a - at the start of the name 
 
 STR and DEX minimums are not currently supported this maybe added in a future release.
 
+## 02.11.2026
+      Fixed Hit Point calculation for high stats. You will have to change CON, POW or SIZ for this to be triggered.  You can of course change it back again to the original value.
+
+
+## 20.07.2025
+     Fixed broken auto expanding textarea that was duplicatiing the NPC description.
+     Fixed Mammoth label in Hit location select.
+     Gave NPC same range of creature hit location types as PC sheet with translations. 
+
 ## 23.05.2023
     Fixed 2 Headed Dragonsnail location roll
     Adjusted location of hit location button

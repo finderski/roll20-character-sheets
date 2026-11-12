@@ -1,0 +1,36 @@
+# Copied from roll20-private-sheets/.actions/sheet-checks/public. Edit it there, not here.
+#
+# pull_request_target runs this file and the action from master, never from the pull request, so a
+# fork cannot change what runs. The action reads the pull request's files through the GitHub API as
+# text; nothing from the pull request is ever checked out, run, installed or built.
+name: Sheet Checks
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    branches: [master]
+
+permissions: {}
+
+concurrency:
+  group: sheet-checks-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  check-sheet:
+    name: Check Sheet
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+      statuses: write
+    steps:
+      # The repository is gigabytes of sheets, and only the action and the root files are needed from master.
+      - name: Check out master
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          sparse-checkout: .actions/sheet-checks
+          persist-credentials: false
+      - name: Run Checks
+        uses: ./.actions/sheet-checks
